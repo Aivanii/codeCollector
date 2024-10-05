@@ -9,19 +9,24 @@ import {
 
 //routes
 import Index from './pages/index.jsx';
+import Catalog from './pages/Catalog.jsx';
 //
 
-const indexPage = createBrowserRouter([
+const Route = createBrowserRouter([
 	{
 		path: '/',
 		element: <Index />,
 		errorElement: <ErrorPage404 />
 	},
-	
+	{
+		path: '/catalog',
+		element: <Catalog />,
+		errorElement: <ErrorPage404 />
+	},
 ]);
 
 ReactDOM.createRoot(document.querySelector("#root")).render(
 	<React.StrictMode>
-		<RouterProvider router={indexPage} />
+		<RouterProvider router={Route} />
 	</React.StrictMode>
 );

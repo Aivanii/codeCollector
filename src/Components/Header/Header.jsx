@@ -8,16 +8,16 @@ export default function Header() {
             <ImgHolder href="/">
                 <Img src="../icons/logo.png"></Img>
             </ImgHolder>
-
+            <nav>
                 <ListContainer>
                     <ListElem>
-                        <Btn>
+                        <Btn href = "/">
                             Home
                         </Btn>
                     </ListElem>
                     <ListElem>
-                        <Btn>
-                            Catalogue
+                        <Btn href = "/catalog">
+                            Catalog
                         </Btn>
                     </ListElem>
                     <ListElem>
@@ -31,7 +31,7 @@ export default function Header() {
                         </Btn>
                     </ListElem>
                 </ListContainer>
-                
+            </nav>
             {!isLogged
                 ? <AccountBtnsContainer>
                     <Btn href="#">LOGIN</Btn>
