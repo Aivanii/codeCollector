@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+const styles = getComputedStyle(document.documentElement);
+const standartFontSize = styles.getPropertyValue('--standartFontSize');
+
 export const HeaderContainer = styled.nav`
     width: 95%;
     margin: auto;
@@ -19,6 +22,7 @@ export const ImgHolder = styled.a`
   height: 60%;
   background: white;
   border-radius: .2rem;
+  font-size: ${standartFontSize};
 `;
 
 export const AccountBtnsContainer = styled.div`
@@ -36,6 +40,7 @@ export const Btn = styled.a`
     color: #ffffffca;
     text-decoration: none;
     transition: color .2s;
+    font-size: ${standartFontSize};
     &:hover{
         color: white;
     }

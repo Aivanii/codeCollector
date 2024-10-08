@@ -10,17 +10,28 @@ import {
 //routes
 import Index from './pages/index.jsx';
 import Catalog from './pages/Catalog.jsx';
+import Articles from './pages/Articles.jsx';
 //
-
 const Route = createBrowserRouter([
 	{
 		path: '/',
 		element: <Index />,
-		errorElement: <ErrorPage404 />
+		errorElement: <ErrorPage404 />,
+		children: [
+			{
+				path: 'home',
+				element: <></>
+			}
+		]
 	},
 	{
 		path: '/catalog',
 		element: <Catalog />,
+		errorElement: <ErrorPage404 />
+	},
+	{
+		path: '/articles/:filt1/:filt2',
+		element: <Articles />,
 		errorElement: <ErrorPage404 />
 	},
 ]);

@@ -6,12 +6,12 @@ export default function Header() {
     return (
         <HeaderContainer>
             <ImgHolder href="/">
-                <Img src="../icons/logo.png"></Img>
+                <Img src="https://i.postimg.cc/k5bY4r07/logo.png"></Img>
             </ImgHolder>
             <nav>
                 <ListContainer>
                     <ListElem>
-                        <Btn href = "/">
+                        <Btn href = "/home">
                             Home
                         </Btn>
                     </ListElem>
@@ -38,7 +38,7 @@ export default function Header() {
                     <AccountBtnSignUp href="#">SIGN UP</AccountBtnSignUp>
                 </AccountBtnsContainer>
                 :
-                <></>
+                <  ></  >
             }
 
         </HeaderContainer>

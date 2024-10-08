@@ -8,9 +8,19 @@
 	src: local("../fonts/Kabrio-Bold.ttf");
 }
 body {
-    background-color: #1c1b1f;
+    background-color: var(--bgColor);
     height: 100vh;
     position: relative;
 	font-family: "Kabrio", "Arial", sans-serif;
 }
-
+:root{
+	--standartDurationTime: .2s;
+	--unactiveFontColor: #ffffffca;
+	--activeFontColor: white;
+	--smallFontSize: clamp(0.5rem, 3vw, 0.85rem);
+	--standartFontSize: clamp(0.5rem, 3vw, 1rem);
+	--bigFontSize: clamp(0.5rem, 5vw, 2rem);
+	--bgColor: #1c1b1f;
+	--lightBgColor: #29282e;
+	--lightLinkBg: #ffffff22;
+}

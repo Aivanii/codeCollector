@@ -3,29 +3,71 @@ import { Container, Button, ListContainer, ListElem, ListElemLink, DownBtn } fro
 
 const BtnLists =
 {
-    "Frontend Development":
-        [
-            "JS",
-            "React"
-        ],
-    "Backend Development":
-        [
-            "Python",
-            "Java",
-            "Ruby",
-            "Fortran"
-        ],
-    "Game Development":
-        [
-            "C#",
-            "C++",
-            "Lua"
-        ],
-    "AI":
-        [
-            "Python"
-        ],
+    "Frontend Development": [
+        "JavaScript",
+        "React",
+        "Vue.js",
+        "Angular",
+        "HTML",
+        "CSS",
+        "Sass",
+        "TypeScript"
+    ],
+    "Backend Development": [
+        "Python",
+        "Java",
+        "Ruby",
+        "Fortran",
+        "Node.js",
+        "PHP",
+        "Go",
+        "C#",
+        "Rust"
+    ],
+    "Game Development": [
+        "C#",
+        "C++",
+        "Lua",
+        "Unity",
+        "Unreal Engine",
+        "Godot",
+        "GameMaker"
+    ],
+    "AI": [
+        "Python",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "Scikit-learn",
+        "OpenAI Gym"
+    ],
+    "Mobile Development": [
+        "Swift",
+        "Kotlin",
+        "React Native",
+        "Flutter"
+    ],
+    "DevOps": [
+        "Docker",
+        "Kubernetes",
+        "Ansible",
+        "Terraform"
+    ],
+    "Database Management": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "SQLite"
+    ],
+    "Cloud Computing": [
+        "AWS",
+        "Azure",
+        "Google Cloud Platform"
+    ]
 };
+
+
+let url;
 
 export default function PLBtns() {
     let BtnsObjs = [];
@@ -41,9 +83,10 @@ export default function PLBtns() {
                 <ListContainer className="ListContainer" aria-hidden="true">
 
                     {BtnLists[elem].map(newLi => {
+                        url = "/articles/" + elem.replace(" ", "_") + "/" + newLi;
                         return (
                             <ListElem key={newLi}>
-                                <ListElemLink className = "ListElemLink">
+                                <ListElemLink className = "ListElemLink" href = {url}>
                                     {newLi}
                                 </ListElemLink>
                             </ListElem>

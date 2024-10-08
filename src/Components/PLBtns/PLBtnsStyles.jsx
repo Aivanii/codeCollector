@@ -37,13 +37,11 @@ export const ListContainer = styled.ul`
   list-style-type: none;
   transition: height .6s, line-height .5s, opacity .5s;
   margin-bottom: .4rem;
-  cursor: pointer;
 `;
 
 export const ListElem = styled.li`
     overflow: hidden;
     color: #ffffffca;
-    cursor: pointer;
     transition: color .4s;
     margin: .2rem;
     &:hover{
@@ -57,7 +55,13 @@ export const ListElemLink = styled.a`
     text-align: center;
     padding: .2rem;
     background: #ffffff22;
+    text-decoration: none;
     border-radius: .2rem;
+    color: #ffffffca;
+    transition: color .4s;
+    &:hover{
+        color: white;
+    }
 `;
 const Svg = styled.svg`
     float: right;

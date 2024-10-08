@@ -1,4 +1,5 @@
 import { FindBar, FindBarContainer } from "./FindStyles";
+
 export default function Find() {
     return (
         <FindBarContainer>
