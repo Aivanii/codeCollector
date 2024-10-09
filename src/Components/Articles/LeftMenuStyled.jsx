@@ -8,9 +8,8 @@ const lightBgColor = styles.getPropertyValue('--lightBgColor');
 const bigFontSize = styles.getPropertyValue('--bigFontSize');
 const lightLinkBg = styles.getPropertyValue('--lightLinkBg');
 
-console.log(standartDurationTime, lightBgColor)
 export const ContainerLeft = styled.div`
-    background: var(--lightBgColor);
+    background: ${lightBgColor};
     width: 20rem;
     height: 100%;
     max-height: 100%;
@@ -19,7 +18,7 @@ export const ContainerLeft = styled.div`
     left: 0;
     transform: translate(-100%, 0);
     position: absolute;
-    transition: transform var(--standartDurationTime);
+    transition: transform ${standartDurationTime};
 `;
 export const OuterListContainer = styled.div`
     max-height: 15rem;

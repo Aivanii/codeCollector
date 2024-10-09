@@ -3,10 +3,11 @@ import styled from "styled-components";
 const styles = getComputedStyle(document.documentElement);
 const smallFontSize = styles.getPropertyValue('--smallFontSize');
 const bigFontSize = styles.getPropertyValue('--bigFontSize');
+const articleActiveWidth = styles.getPropertyValue('--articleActiveWidth');
 
 export const TopContainer = styled.div`
     margin: auto;
-    width: clamp(160px, 50vw, 1280px);
+    width: ${articleActiveWidth};
 `;
 
 export const FlexContainer = styled.div`

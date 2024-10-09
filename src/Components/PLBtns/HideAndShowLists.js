@@ -1,5 +1,4 @@
 'use strict';
-console.log(123)
 const menus = document.querySelectorAll('.ListContainer');
 const PrLnBtns = document.querySelectorAll('.ListButton');
 for(let i = 0; i < PrLnBtns.length; i++){
