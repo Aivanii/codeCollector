@@ -9,7 +9,10 @@ import {
 export default function LeftMenu() {
     const [isDivActive, setIsDivActive] = useState(false);
     const divContainer = document.querySelector("#divContainer");
-
+    let scriptSrc = "../../src/Components/PLBtns/HideAndShowLists.js";
+    if(window.location.href.split('/').length === 7){
+        scriptSrc = '../' + scriptSrc;
+    }
     useEffect(() => {
         if (divContainer) {
             divContainer.style.transform = `translate(${isDivActive ? 0 : '-100%'}, 0)`;
@@ -20,12 +23,12 @@ export default function LeftMenu() {
     useEffect(() => {
         const createScript = async () => {
             const script = document.createElement('script');
-            script.src = "../../src/Components/PLBtns/HideAndShowLists.js";
+            script.src = scriptSrc;
             script.async = true;
             script.type = "module";
             document.body.appendChild(script);
         }
-        if(!document.querySelector(`script[src="../../src/Components/PLBtns/HideAndShowLists.js"]`)) createScript();
+        if(!document.querySelector(`script[src="${scriptSrc}"]`)) createScript();
     }, []);
 
     return (

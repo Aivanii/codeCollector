@@ -9,7 +9,7 @@ export default function index() {
         
         <Find></Find>
 
-        <a href = "articles/DevOps/Docker">text</a>
+        <a href = "articles/DevOps/Docker/test_article">text</a>
 
         <BgCircles></BgCircles>
         </>
