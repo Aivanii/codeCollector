@@ -1,76 +1,75 @@
-
 {
-  "Language": [
-    "Python" :[
-      "AI",
-      "Backend Development",
-    ],
-    "C++":[
-      "Game Development",
+    "Language": {
+        "Python": [
+            "AI",
+            "Backend Development"
+        ],
+        "C++": [
+            "Game Development"
+        ]
+    },
+    "Problems": {
 
+    "Frontend Development": [
+        "JavaScript",
+        "React",
+        "Vue.js",
+        "Angular",
+        "HTML",
+        "CSS",
+        "Sass",
+        "TypeScript"
     ],
-  ],
-  "Problems": [
-      "Frontend Development": [
-          "JavaScript",
-          "React",
-          "Vue.js",
-          "Angular",
-          "HTML",
-          "CSS",
-          "Sass",
-          "TypeScript"
-      ],
-      "Backend Development": [
-          "Python",
-          "Java",
-          "Ruby",
-          "Fortran",
-          "Node.js",
-          "PHP",
-          "Go",
-          "C#",
-          "Rust"
-      ],
-      "Game Development": [
-          "C#",
-          "C++",
-          "Lua",
-          "Unity",
-          "Unreal Engine",
-          "Godot",
-          "GameMaker"
-      ],
-      "AI": [
-          "Python",
-          "TensorFlow",
-          "PyTorch",
-          "Keras",
-          "Scikit-learn",
-          "OpenAI Gym"
-      ],
-      "Mobile Development": [
-          "Swift",
-          "Kotlin",
-          "React Native",
-          "Flutter"
-      ],
-      "DevOps": [
-          "Docker",
-          "Kubernetes",
-          "Ansible",
-          "Terraform"
-      ],
-      "Database Management": [
-          "MySQL",
-          "PostgreSQL",
-          "MongoDB",
-          "SQLite"
-      ],
-      "Cloud Computing": [
-          "AWS",
-          "Azure",
-          "Google Cloud Platform"
-      ]
-  ]
+    "Backend Development": [
+        "Python",
+        "Java",
+        "Ruby",
+        "Fortran",
+        "Node.js",
+        "PHP",
+        "Go",
+        "C#",
+        "Rust"
+    ],
+    "Game Development": [
+        "C#",
+        "C++",
+        "Lua",
+        "Unity",
+        "Unreal Engine",
+        "Godot",
+        "GameMaker"
+    ],
+    "AI": [
+        "Python",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "Scikit-learn",
+        "OpenAI Gym"
+    ],
+    "Mobile Development": [
+        "Swift",
+        "Kotlin",
+        "React Native",
+        "Flutter"
+    ],
+    "DevOps": [
+        "Docker",
+        "Kubernetes",
+        "Ansible",
+        "Terraform"
+    ],
+    "Database Management": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "SQLite"
+    ],
+    "Cloud Computing": [
+        "AWS",
+        "Azure",
+        "Google Cloud Platform"
+    ]
+}
 }
