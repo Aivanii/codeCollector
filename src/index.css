@@ -31,3 +31,11 @@ body {
 	--lightBgColor: #29282e;
 	--lightLinkBg: #ffffff22;
 }
+.CodeText {
+    margin: 0 .25rem 0 .25rem;
+    background: var(--codeBgColor);
+    border-radius: .2rem;
+    padding: 0 .2rem 0 .2rem;
+    color: var(--codeFontColor);
+    font-size: var(--standartFontSize);
+}
