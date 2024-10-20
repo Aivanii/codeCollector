@@ -11,7 +11,10 @@ import {
 import Index from './pages/index.jsx';
 import Catalog from './pages/Catalog.jsx';
 import Articles from './pages/Articles.jsx';
-import TextArticle from "./pages/TextArticle.jsx"
+import TextArticle from "./pages/TextArticle.jsx";
+//components
+import LeftMenu from "./Components/Articles/LeftMenu.jsx";
+import TwoFiltersPage from './Components/TwoFiltersPage/TwoFiltersPage.jsx';
 //
 const Route = createBrowserRouter([
 	{
@@ -32,14 +35,17 @@ const Route = createBrowserRouter([
 	},
 	{
 		path: '/articles/:filt1/:filt2',
-		element: <Articles />,
+		element: (<>
+			<Articles />
+			<TwoFiltersPage />
+		</>),
 		errorElement: <ErrorPage404 />,
 	},
 	{
 		path: '/articles/:filt1/:filt2/:article',
 		element: (<>
 			<Articles />
-			<p>здесь должна прогружаться статья</p>
+			<LeftMenu></LeftMenu>
 			<TextArticle />
 		</>),
 		errorElement: <ErrorPage404 />,

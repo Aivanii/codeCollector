@@ -1,9 +1,10 @@
+import { Container, Span } from "./TwoFiltersPageStyles";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import LoadingElem from './LoadingElem';
-import Footer from '../Footer/Footer';
-import ErrorElem from './ErrorElem';
-export default function MainArticle() {
+import LoadingElem from "../Articles/LoadingElem";
+import Footer from "../Footer/Footer";
+import ErrorElem from "../Articles/ErrorElem";
+export default function TwoFiltersPage() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -12,7 +13,7 @@ export default function MainArticle() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/articles/${url[2]}/${url[3]}/${url[4]}`);
+                const response = await axios.get(`http://localhost:8080/articles/${url[2]}/${url[3]}`);
                 setData(response.data.users);
             } catch {
                 setError('Ошибка при загрузке данных');
@@ -20,21 +21,19 @@ export default function MainArticle() {
                 setLoading(false);
             }
         };
-        const time = Math.floor((Math.random() * 30000 % 10000));
-        console.log(`Задержка скачивания: ${time / 1000}s\n(Удалить потом эту строчку когда-нибудь)`)
-        setTimeout(fetchData, time);
+        fetchData();
     }, []);
-
-
     return (
         <>
             {error ? (
-                <ErrorElem />
+                <ErrorElem/>
             ) : loading ?
                 <LoadingElem />
                 : (
                     <>
-                        <div className="Container" dangerouslySetInnerHTML={{ __html: data }}></div>
+                        <Container>
+                            <Span style = {{color: "lime"}}>Данные получены успешно!</Span>
+                        </Container>
                         <Footer />
                     </>
                 )}
@@ -42,4 +41,3 @@ export default function MainArticle() {
         </>
     );
 }
-

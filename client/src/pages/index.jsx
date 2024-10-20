@@ -4,13 +4,13 @@ import Find from "../Components/FindBar/Find";
 export default function index() {
     return (
         <>
-        <Header></Header>
-        
-        <Find></Find>
+            <Header></Header>
 
-        <a href = "articles/DevOps/Docker/test_article">text</a>
+            <Find></Find>
 
-        <BgCircles></BgCircles>
+            <a href="articles/DevOps/Docker/test_article" style={{ color: "lime" }}>Переход на страницу с единственной работающей статьёй</a>
+
+            <BgCircles></BgCircles>
         </>
     );
 }

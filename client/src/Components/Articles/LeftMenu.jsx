@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
 import {
-    FilterSvg, FilterBtn, ContainerLeft, CloseSvg, CloseBtn, ElemsContainer, OuterListContainer
-} from "./LeftMenuStyled";
-
-import {
-    ListElemLink, Button, DownBtn, ListContainer, ListElem } from "../PLBtns/PLBtnsStyles";
+    FilterSvg, FilterBtn, ContainerLeft, CloseSvg, CloseBtn,
+    ElemsContainer, Span
+} from "./LeftMenuStyles";
+import { Link } from "./MainArticleStyles";
 
 export default function LeftMenu() {
     const [isDivActive, setIsDivActive] = useState(false);
     const divContainer = document.querySelector("#divContainer");
     let scriptSrc = "../../src/Components/PLBtns/HideAndShowLists.js";
-    if(window.location.href.split('/').length === 7){
+    if (window.location.href.split('/').length === 7) {
         scriptSrc = '../' + scriptSrc;
     }
     useEffect(() => {
@@ -28,8 +27,13 @@ export default function LeftMenu() {
             script.type = "module";
             document.body.appendChild(script);
         }
-        if(!document.querySelector(`script[src="${scriptSrc}"]`)) createScript();
+        if (!document.querySelector(`script[src="${scriptSrc}"]`)) createScript();
     }, []);
+
+    const sections = Array.from(document.querySelectorAll("h2")).map(
+        h2 => (<Link key={h2.id} href={"#" + h2.id}>{h2.textContent}</Link>)
+    );
+    console.log(sections);
 
     return (
         <>
@@ -41,45 +45,8 @@ export default function LeftMenu() {
                     <CloseSvg></CloseSvg>
                 </CloseBtn>
                 <ElemsContainer>
-                
-
-
-                    <Button className="ListButton">Задача
-                        <DownBtn></DownBtn>
-                    </Button>
-                        <OuterListContainer>
-                            <ListContainer className="ListContainer">
-                                <ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem>
-                            </ListContainer>
-                        </OuterListContainer>
-                        <Button className="ListButton">Задача
-                        <DownBtn></DownBtn>
-                    </Button>
-                        <OuterListContainer>
-                            <ListContainer className="ListContainer">
-                                <ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem>
-                            </ListContainer>
-                        </OuterListContainer>
-                        <Button className="ListButton">Задача
-                        <DownBtn></DownBtn>
-                    </Button>
-                        <OuterListContainer>
-                            <ListContainer className="ListContainer">
-                                <ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem>
-                            </ListContainer>
-                        </OuterListContainer>
-                        <Button className="ListButton">Задача
-                        <DownBtn></DownBtn>
-                    </Button>
-                        <OuterListContainer>
-                            <ListContainer className="ListContainer">
-                                <ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem>
-                                </ListContainer>
-                        </OuterListContainer>
-
-
-
-
+                    <Span>Разделы:</Span>
+                    {sections}
                 </ElemsContainer>
             </ContainerLeft>
         </>);

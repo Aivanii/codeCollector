@@ -3,14 +3,18 @@ import styled from 'styled-components';
 const styles = getComputedStyle(document.documentElement);
 const standartFontSize = styles.getPropertyValue('--standartFontSize');
 
-export const HeaderContainer = styled.nav`
-    width: 95%;
+export const HeaderContainer = styled.header`
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 5rem;
+    border-bottom: var(--HeaderBorderColor);
+    margin-bottom: 1.5rem;
 `;
 
 export const Img = styled.img`
@@ -51,7 +55,6 @@ export const AccountBtnSignUp = styled(Btn)`
     padding: .5rem 1rem .5rem 1rem;
     border-radius: .2rem;
 `;
-
 export const ListContainer = styled.ul`
     list-style-type: none;
     display: flex;
@@ -61,6 +64,7 @@ export const ListContainer = styled.ul`
     transform: translate(-50%, 0);
     gap: 10%;
     width: -webkit-fill-available;
+    margin-top: -0.4rem;
 `;
 
 export const ListElem = styled.li`
