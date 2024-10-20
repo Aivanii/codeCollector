@@ -491,10 +491,10 @@ export default function Create() {
                 <a class="TopLiLink" href="/home">Home</a>
             </li>
             <li class="TopLi">
-                <a class="TopLiLink" href="${selectedFilters[0]}">${selectedFilters[0]}</a>
+                <a class="TopLiLink" href="/${selectedFilters[0]}">${selectedFilters[0]}</a>
             </li>
             <li class="TopLi">
-                <a class="TopLiLink" href="${selectedFilters[1]}">${selectedFilters[1]}</a>
+                <a class="TopLiLink" href="/${selectedFilters[0]}/${selectedFilters[1]}">${selectedFilters[1]}</a>
             </li>
         </ul>
         <span class="DateSpan">${dateToday}</span>
