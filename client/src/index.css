@@ -75,7 +75,7 @@ body {
 }
 
 
-.CodeText {
+.CodeText, code {
     margin: 0 .25rem 0 .25rem;
     background: var(--codeBgColor);
     border-radius: .2rem;
