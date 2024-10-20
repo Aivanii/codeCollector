@@ -4,13 +4,14 @@ import {
 } from "./LeftMenuStyled";
 
 import {
-    ListElemLink, Button, DownBtn, ListContainer, ListElem } from "../PLBtns/PLBtnsStyles";
+    ListElemLink, Button, DownBtn, ListContainer, ListElem
+} from "../PLBtns/PLBtnsStyles";
 
 export default function LeftMenu() {
     const [isDivActive, setIsDivActive] = useState(false);
     const divContainer = document.querySelector("#divContainer");
     let scriptSrc = "../../src/Components/PLBtns/HideAndShowLists.js";
-    if(window.location.href.split('/').length === 7){
+    if (window.location.href.split('/').length === 7) {
         scriptSrc = '../' + scriptSrc;
     }
     useEffect(() => {
@@ -28,7 +29,7 @@ export default function LeftMenu() {
             script.type = "module";
             document.body.appendChild(script);
         }
-        if(!document.querySelector(`script[src="${scriptSrc}"]`)) createScript();
+        if (!document.querySelector(`script[src="${scriptSrc}"]`)) createScript();
     }, []);
 
     return (
@@ -41,41 +42,41 @@ export default function LeftMenu() {
                     <CloseSvg></CloseSvg>
                 </CloseBtn>
                 <ElemsContainer>
-                
+
 
 
                     <Button className="ListButton">Задача
                         <DownBtn></DownBtn>
                     </Button>
-                        <OuterListContainer>
-                            <ListContainer className="ListContainer">
-                                <ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem>
-                            </ListContainer>
-                        </OuterListContainer>
-                        <Button className="ListButton">Задача
+                    <OuterListContainer>
+                        <ListContainer className="ListContainer">
+                            <ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem>
+                        </ListContainer>
+                    </OuterListContainer>
+                    <Button className="ListButton">Задача
                         <DownBtn></DownBtn>
                     </Button>
-                        <OuterListContainer>
-                            <ListContainer className="ListContainer">
-                                <ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem>
-                            </ListContainer>
-                        </OuterListContainer>
-                        <Button className="ListButton">Задача
+                    <OuterListContainer>
+                        <ListContainer className="ListContainer">
+                            <ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem>
+                        </ListContainer>
+                    </OuterListContainer>
+                    <Button className="ListButton">Задача
                         <DownBtn></DownBtn>
                     </Button>
-                        <OuterListContainer>
-                            <ListContainer className="ListContainer">
-                                <ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem>
-                            </ListContainer>
-                        </OuterListContainer>
-                        <Button className="ListButton">Задача
+                    <OuterListContainer>
+                        <ListContainer className="ListContainer">
+                            <ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem><ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem>
+                        </ListContainer>
+                    </OuterListContainer>
+                    <Button className="ListButton">Задача
                         <DownBtn></DownBtn>
                     </Button>
-                        <OuterListContainer>
-                            <ListContainer className="ListContainer">
-                                <ListElem> <ListElemLink className = "ListElemLink">Web</ListElemLink></ListElem>
-                                </ListContainer>
-                        </OuterListContainer>
+                    <OuterListContainer>
+                        <ListContainer className="ListContainer">
+                            <ListElem> <ListElemLink className="ListElemLink">Web</ListElemLink></ListElem>
+                        </ListContainer>
+                    </OuterListContainer>
 
 
 
