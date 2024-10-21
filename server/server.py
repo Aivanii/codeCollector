@@ -11,10 +11,11 @@ def statis(filter1,filter2,article):
 
     return jsonify(
         {
+            #не скидывай ты сюда фильтры, они отрисовываются неправильно, б
             "users": [
-                filter1,
-                filter2,
-                article,
+                #filter1,
+                #filter2,
+                #article,
                 data
             ]
         }

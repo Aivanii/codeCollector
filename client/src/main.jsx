@@ -14,6 +14,7 @@ import Articles from './pages/Articles.jsx';
 import TextArticle from "./pages/TextArticle.jsx";
 //components
 import LeftMenu from "./Components/Articles/LeftMenu.jsx";
+import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
 import TwoFiltersPage from './Components/TwoFiltersPage/TwoFiltersPage.jsx';
 //
 const Route = createBrowserRouter([
@@ -32,6 +33,14 @@ const Route = createBrowserRouter([
 		path: '/catalog',
 		element: <Catalog />,
 		errorElement: <ErrorPage404 />
+	},
+	{
+		path: '/articles/:filt1',
+		element: (<>
+			<Articles />
+			<OneFilterPage />
+		</>),
+		errorElement: <ErrorPage404 />,
 	},
 	{
 		path: '/articles/:filt1/:filt2',

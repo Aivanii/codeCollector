@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
     width: 100%;
     bottom: 0;
-    margin-top: 1rem;
+    margin-top: 5rem;
     padding: 1rem;
     display: flex;
     flex-direction: row;
