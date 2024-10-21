@@ -15,7 +15,7 @@ export default function ErrorElem(){
     return(
         <Container>
             <Span>
-                Ошибка загрузки статьи
+                Ошибка загрузки материала
             </Span>
         </Container>
     );
