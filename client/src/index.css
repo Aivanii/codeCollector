@@ -22,6 +22,7 @@ body {
 
     --articleActiveWidth: clamp(160px, 65vw, 1280px);
     --standartDurationTime: .2s;
+    --longDurationTime: .75s;
     --linkUnactiveColor: #84a0ef;
     --linkActiveColor: white;
     --unactiveFontColor: #ffffffca;
@@ -39,7 +40,10 @@ body {
     --leftMenuBorderColor: 1px solid white;
     --leftMenuBg: #1d1c1fd4;
     --leftMenuBgBlur: blur(0.5rem);
+    --standartBgBlur: blur(0.5rem);
 
+    --authHrBorder: 1px solid #ffffffca;
+    --standartBorder: 1px solid white;
     --HeaderBorderColor: 1px solid white;
     --FooterBorderColor: 1px solid white;
 }
