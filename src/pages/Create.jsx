@@ -483,6 +483,8 @@ export default function Create() {
             }
         }
         let TheFinalCode = `
+
+        <title>${titleName}</title>
         <link rel="stylesheet" href="../../src/articlesStyles.css">
         <div class="TopContainer">
     <div class="FlexContainer">
