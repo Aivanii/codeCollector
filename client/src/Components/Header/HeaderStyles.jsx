@@ -41,6 +41,7 @@ export const AccountBtnsContainer = styled.div`
 
 export const Btn = styled.a`
     margin: .2rem;
+    cursor: pointer;
     color: #ffffffca;
     text-decoration: none;
     transition: color .2s;
@@ -85,9 +86,9 @@ export const AuthorizationContainer = styled.form`
     left: 50%;
     top: 0;
     margin-top: 0;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -110%);
     z-index: 100;
-    transition: margin-top var(--longDurationTime);
+    transition: top var(--longDurationTime);
 `;
 export const Label = styled.label`
     color: var(--unactiveFontColor);
@@ -113,7 +114,9 @@ export const Hr = styled.div`
 `;
 export const AuthSpan = styled.span`
     color: var(--unactiveFontColor);
-    font-size: var(--standartFontSize);
+    font-size: var(--smallFontSize);
+    text-align: center;
+    margin: 0.5rem;
 `;
 export const SubmitBtn = styled.button`
     padding: .2rem;
