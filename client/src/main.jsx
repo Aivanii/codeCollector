@@ -12,10 +12,12 @@ import Index from './pages/index.jsx';
 import Catalog from './pages/Catalog.jsx';
 import Articles from './pages/Articles.jsx';
 import TextArticle from "./pages/TextArticle.jsx";
+import User from './Components/User/User.jsx';
 //components
 import LeftMenu from "./Components/Articles/LeftMenu.jsx";
 import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
 import TwoFiltersPage from './Components/TwoFiltersPage/TwoFiltersPage.jsx';
+import MainUser from './pages/MainUser/MainUser.jsx';
 //
 const Route = createBrowserRouter([
 	{
@@ -59,6 +61,13 @@ const Route = createBrowserRouter([
 		</>),
 		errorElement: <ErrorPage404 />,
 	},
+	{
+		path: '/user/:id',
+		element: (<>
+			<User rightMenu={MainUser} Title={"Страница пользователя"}></User>
+		</>),
+		errorElement: <ErrorPage404 />,
+	}
 ]);
 
 ReactDOM.createRoot(document.querySelector("#root")).render(

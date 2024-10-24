@@ -46,6 +46,9 @@ body {
     --standartBorder: 1px solid white;
     --HeaderBorderColor: 1px solid white;
     --FooterBorderColor: 1px solid white;
+
+    --userContainerWidth: clamp(160px, 65vw, 1280px);
+    --userLeftContainerWidth: 15rem;
 }
 
 .Container {
