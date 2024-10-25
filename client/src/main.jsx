@@ -13,6 +13,7 @@ import Catalog from './pages/Catalog.jsx';
 import Articles from './pages/Articles.jsx';
 import TextArticle from "./pages/TextArticle.jsx";
 import User from './Components/User/User.jsx';
+import AboutPage from './pages/AboutPage.jsx';
 //components
 import LeftMenu from "./Components/Articles/LeftMenu.jsx";
 import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
@@ -30,6 +31,11 @@ const Route = createBrowserRouter([
 				element: <></>
 			}
 		]
+	},
+	{
+		path: '/about',
+		element: <AboutPage />,
+		errorElement: <ErrorPage404 />
 	},
 	{
 		path: '/catalog',
@@ -64,7 +70,7 @@ const Route = createBrowserRouter([
 	{
 		path: '/user/:id',
 		element: (<>
-			<User rightMenu={MainUser} Title={"Страница пользователя"}></User>
+			<User RightMenu={MainUser} Title={"Страница пользователя"}></User>
 		</>),
 		errorElement: <ErrorPage404 />,
 	}

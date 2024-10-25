@@ -33,6 +33,7 @@ export const LeftDivUl = styled.ul`
     border-radius: .2rem;
     border: var(--standartBorder);
     list-style-type: none;
+    height: 100%;
 `;
 export const Li = styled.li`
     margin: .5rem;

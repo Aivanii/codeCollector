@@ -15,7 +15,7 @@ export default function User({ RightMenu, Title }) {
                     <TitleElem>
                         {Title}
                     </TitleElem>
-                        {RightMenu}
+                        <RightMenu />
                 </RightDiv>
             </Main>
             <Footer></Footer>
