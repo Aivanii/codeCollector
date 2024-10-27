@@ -9,9 +9,13 @@
     src: local("../fonts/Kabrio-Bold.ttf");
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     background-color: var(--bgColor);
-    height: 100vh;
     position: relative;
     font-family: "Kabrio", "Arial", sans-serif;
 }
@@ -84,7 +88,8 @@ body {
 }
 
 
-.CodeText, code {
+.CodeText,
+code {
     margin: 0 .25rem 0 .25rem;
     background: var(--codeBgColor);
     border-radius: .2rem;
@@ -167,17 +172,23 @@ pre {
     display: inline-block;
     font-size: var(--smallFontSize);
 }
-.TopLiLink{
+
+.TopLiLink {
     color: var(--linkUnactiveColor);
     transition: color var(--standartDurationTime);
     cursor: pointer;
     text-decoration: none;
     font-size: var(--smallFontSize);
 }
-.TopLiLink:hover{
+
+.TopLiLink:hover {
     color: var(--linkActiveColor);
 }
-.DateSpan{
+
+.DateSpan {
     color: var(--unactiveFontColor);
     font-size: var(--smallFontSize);
+}
+a:hover{
+    text-decoration: underline; 
 }

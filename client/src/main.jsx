@@ -14,6 +14,7 @@ import Articles from './pages/Articles.jsx';
 import TextArticle from "./pages/TextArticle.jsx";
 import User from './Components/User/User.jsx';
 import AboutPage from './pages/AboutPage.jsx';
+import FAQ from './pages/FAQ.jsx';
 //components
 import LeftMenu from "./Components/Articles/LeftMenu.jsx";
 import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
@@ -35,6 +36,11 @@ const Route = createBrowserRouter([
 	{
 		path: '/about',
 		element: <AboutPage />,
+		errorElement: <ErrorPage404 />
+	},
+	{
+		path: '/FAQ',
+		element: <FAQ />,
 		errorElement: <ErrorPage404 />
 	},
 	{

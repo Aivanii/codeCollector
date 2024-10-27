@@ -73,13 +73,13 @@ export default function Header() {
                             </Btn>
                         </ListElem>
                         <ListElem>
-                            <Btn href = "/about">
+                            <Btn href="/about">
                                 About
                             </Btn>
                         </ListElem>
                         <ListElem>
-                            <Btn>
-                                Help
+                            <Btn href="/FAQ">
+                                FAQ
                             </Btn>
                         </ListElem>
                     </ListContainer>
