@@ -11,22 +11,20 @@ export const Title = styled.h1`
     margin-bottom: 1rem;
 `;
 
-export const QuestionContainer = styled.div`
-    border-radius: .2rem;
-    padding: .5rem;
-    margin-bottom: 1rem;
+export const Container = styled.article`
+
 `;
 
-export const ContainerTitile = styled.h2`
-    font-size: var(--smallBigFontSize);
-    color: var(--unactiveFontColor);
-`;
-
-export const ContainerText = styled.p`
+export const Text = styled.p`
     font-size: var(--standartFontSize);
     color: var(--unactiveFontColor);
 `;
 
-export const Hr = styled.div`
-    margin: .5rem 0 .5rem 0;
+export const ContainerTitle = styled.h2`
+    margin-bottom: 1rem;
+    font-size: var(--smallBigFontSize);
+    color: var(--unactiveFontColor);
+    &:not(:first-child) {
+        margin-top: 1rem;
+    }
 `;

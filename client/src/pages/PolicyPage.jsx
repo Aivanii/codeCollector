@@ -1,15 +1,19 @@
-import Header from "../Components/Header/Header";
-import Footer from "../Components/Footer/Footer";
-import BgCircles from "../Components/BackgroundCirclies/BgCircles";
-import FAQMain from "../Components/FAQComponents/FAQMain";
+import Policy from "../Components/Policy";
 
-document.title = "Часто задаваемые вопросы";
-export default function FAQ() {
+import Header from "../Components/Header/Header";
+import BgCircles from "../Components/BackgroundCirclies/BgCircles";
+import Footer from "../Components/Footer/Footer";
+document.title = "Политика конфиденциальности";
+
+export default function PolicyPage() {
     return (
         <>
             <Header></Header>
+
+            <Policy />
+
             <BgCircles></BgCircles>
-            <FAQMain></FAQMain>
+
             <Footer></Footer>
         </>
     );
