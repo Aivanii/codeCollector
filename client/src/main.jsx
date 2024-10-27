@@ -17,6 +17,7 @@ import AboutPage from './pages/AboutPage.jsx';
 import FAQ from './pages/FAQ.jsx';
 import Privacy from './pages/Privacy.jsx';
 import PolicyPage from './pages/PolicyPage.jsx';
+import EmployeesPage from './pages/EmployeesPage.jsx';
 //components
 import LeftMenu from "./Components/Articles/LeftMenu.jsx";
 import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
@@ -53,6 +54,11 @@ const Route = createBrowserRouter([
 	{
 		path: '/policy',
 		element: <PolicyPage />,
+		errorElement: <ErrorPage404 />
+	},
+	{
+		path: '/employees',
+		element: <EmployeesPage />,
 		errorElement: <ErrorPage404 />
 	},
 	{

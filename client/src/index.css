@@ -18,6 +18,7 @@ body {
     background-color: var(--bgColor);
     position: relative;
     font-family: "Kabrio", "Arial", sans-serif;
+    color: var(--unactiveFontColor);
 }
 
 :root {
@@ -45,6 +46,7 @@ body {
     --leftMenuBg: #1d1c1fd4;
     --leftMenuBgBlur: blur(0.5rem);
     --standartBgBlur: blur(0.5rem);
+    --DevContainerWidth: clamp(10rem, 105vw, 1280px);
 
     --authHrBorder: 1px solid #ffffffca;
     --standartBorder: 1px solid white;

@@ -13,7 +13,7 @@ export default function Header() {
         const fetchData = async () => {
             try {
                 const response = await axios.get(url);
-                alert("тут должна будет быть проверка на вход пользователя", response);
+                alert("тут должна будет быть проверка на вход пользователя (src>Components>Header>Header.jsx 16)", response);
             } catch {
                 alert("ошибка загрузки данных");
             }
