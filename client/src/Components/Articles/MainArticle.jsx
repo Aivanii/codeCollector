@@ -12,8 +12,13 @@ export default function MainArticle() {
     useEffect(() => {
         const fetchData = async () => {
             try {
+<<<<<<< HEAD
                 const response = await axios.get(`http://localhost:8080/articles/${url[2]}/${url[3]}/${url[4]}`);
                 setData(response.data.users);
+=======
+                const response = await axios.get(`http://localhost:8080/articles/${url[2]}/${url[3]}/${url[4]}`, {withCredentials: true});
+                setData(response.data.users[0]);
+>>>>>>> da96dfce048c911be57c190f10c6f3c755007c07
             } catch {
                 setError('Ошибка при загрузке данных');
             } finally {

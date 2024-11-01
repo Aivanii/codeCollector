@@ -21,7 +21,7 @@ export default function OneFilterPage() {
                 setLoading(false);
             }
         };
-        setTimeout(fetchData(), 2000);
+        fetchData()
     }, []);
     return (
         <>

@@ -1,3 +1,4 @@
+import axios from 'axios';
 export default function SendAuthData(event, authType) {
     event.preventDefault();
     (authType == "log") ? LoginCheck() : RegisterCheck();
@@ -49,26 +50,23 @@ function DataSending(span, name, password, email = null) {
     data["name"] = name;
     data["password"] = password;
     if (email) data["email"] = email;
-    let url = new URL(window.location.href).pathname;
-
-    fetch(`${url}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            span.textContent = response;
-            setTimeout(() => { location.reload() }, 1000);
-        })
-        .catch(e => {
-            console.log('Catch block error:', e);
-            span.textContent = "Произошла ошибка во время обработки запроса";
-        });
+    const fetchData = async () => {
+        try {
+            const response = await axios.post('http://localhost:8080/log', data,
+                {
+                    withCredentials: true,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }
+            );
+            span.textContent = JSON.stringify(response.data);
+            setTimeout(() => { location.reload(); }, 1000);
+        } catch (error) {
+            console.log('Catch block error:', error);
+        }
+    };
+    fetchData();
 }
 
 function UserNameCheck(name) {
