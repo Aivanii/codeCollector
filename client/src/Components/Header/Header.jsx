@@ -8,29 +8,18 @@ import SendAuthData from "./SendAuthData";
 
 export default function Header() {
     let isLogged = false;
-<<<<<<< HEAD
-    let url = new URL(window.location.href).pathname;
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(url);
-                alert("тут должна будет быть проверка на вход пользователя (src>Components>Header>Header.jsx 16)", response);
-=======
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:8080/user', {withCredentials: true});
->>>>>>> da96dfce048c911be57c190f10c6f3c755007c07
             } catch {
                 alert("ошибка загрузки данных");
             }
         };
         fetchData();
     }, []);
-<<<<<<< HEAD
 
-=======
->>>>>>> da96dfce048c911be57c190f10c6f3c755007c07
     const [activeForm, setActiveForm] = useState(null);
 
     const changeTransformActiveForm = (event) => {

@@ -50,9 +50,10 @@ function DataSending(span, name, password, email = null) {
     data["name"] = name;
     data["password"] = password;
     if (email) data["email"] = email;
+    const authType = email ? "reg" : "log";
     const fetchData = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/log', data,
+            const response = await axios.post(`http://localhost:8080/${authType}`, data,
                 {
                     withCredentials: true,
                     headers: {

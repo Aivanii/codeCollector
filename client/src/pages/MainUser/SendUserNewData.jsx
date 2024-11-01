@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-=======
 import axios from 'axios';
->>>>>>> da96dfce048c911be57c190f10c6f3c755007c07
 export default function SendUserNewData(userId, userField, userValue){
     const Data = {
         "id": userId,
         [userField] : userValue
     }
-<<<<<<< HEAD
-    fetch("/123", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify(Data)
-    });
-    alert("успешно");
-    console.log(Data);
-=======
     console.log(Data)
     const fetchData = async () => {
         try {
@@ -36,5 +22,4 @@ export default function SendUserNewData(userId, userField, userValue){
         }
         fetchData();
     };
->>>>>>> da96dfce048c911be57c190f10c6f3c755007c07
 }
