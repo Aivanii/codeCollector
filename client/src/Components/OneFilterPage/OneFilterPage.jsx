@@ -13,7 +13,7 @@ export default function OneFilterPage() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/articles/${url[2]}`);
+                const response = await axios.get(`http://localhost:8080/articles/${url[2]}`, {withCredentials: true});
                 setData(response.data.users[0]);
             } catch {
                 setError('Ошибка при загрузке данных');
@@ -21,7 +21,7 @@ export default function OneFilterPage() {
                 setLoading(false);
             }
         };
-        setTimeout(fetchData(), 2000);
+        fetchData()
     }, []);
     return (
         <>
@@ -44,23 +44,25 @@ export default function OneFilterPage() {
                 <LoadingElem />
                 : (
                     <>
-                        {
-                            (data.length > 0)
-                                ?
-                                (data.map((elem, index) => {
-                                    return <Link key={index} href={`/articles/${url[2]}/` + elem}>{elem.replace(/_/g, " ")}</Link>
-                                }))
-                                :
-                                <>
-                                    <br></br>
-                                    <Span>
-                                        Статей по выбранной технологии на данный момент нет.
-                                        Приносим свои искренние извинения. Нам очень важно благополучие
-                                        наших пользователей, так что мы в скорейшем времени
-                                        приложим все возможные усилия для устранения этих неполадок!
-                                    </Span>
-                                </>
-                        }
+                        <Container>
+                            {
+                                (data.length > 0)
+                                    ?
+                                    (data.map((elem, index) => {
+                                        return <Link key={index} href={`/articles/${url[2]}/` + elem}>{elem.replace(/_/g, " ")}</Link>
+                                    }))
+                                    :
+                                    <>
+                                        <br></br>
+                                        <Span>
+                                            Статей по выбранной технологии на данный момент нет.
+                                            Приносим свои искренние извинения. Нам очень важно благополучие
+                                            наших пользователей, так что мы в скорейшем времени
+                                            приложим все возможные усилия для устранения этих неполадок!
+                                        </Span>
+                                    </>
+                            }
+                        </Container>
                         <Footer />
                     </>
                 )}

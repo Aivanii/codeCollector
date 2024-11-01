@@ -13,7 +13,7 @@ export default function TwoFiltersPage() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/articles/${url[2]}/${url[3]}`);
+                const response = await axios.get(`http://localhost:8080/articles/${url[2]}/${url[3]}`, {withCredentials: true});
                 setData(response.data.users[0]);
             } catch {
                 setError('Ошибка при загрузке данных');

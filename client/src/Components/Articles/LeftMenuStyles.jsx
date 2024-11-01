@@ -14,7 +14,7 @@ export const ContainerLeft = styled.div`
     transition: transform  var(--standartDurationTime);
     z-index: 10;
     border-right: var(--leftMenuBorderColor);
-    backdrop-filter: var(--leftMenuBgBlur);
+    backdrop-filter: var(--standartBgBlur);
 `;
 export const OuterListContainer = styled.div`
     max-height: 15rem;

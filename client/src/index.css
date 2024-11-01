@@ -9,11 +9,16 @@
     src: local("../fonts/Kabrio-Bold.ttf");
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     background-color: var(--bgColor);
-    height: 100vh;
     position: relative;
     font-family: "Kabrio", "Arial", sans-serif;
+    color: var(--unactiveFontColor);
 }
 
 :root {
@@ -29,7 +34,7 @@ body {
     --activeFontColor: white;
     --smallFontSize: clamp(0.5rem, 3vw, 0.85rem);
     --standartFontSize: clamp(0.5rem, 3vw, 1rem);
-    --smallBigFontSize: clamp(0.5rem, 4vw, 1.5rem);
+    --smallBigFontSize: clamp(0.5rem, 4vw, 1.4rem);
     --bigFontSize: clamp(0.5rem, 5vw, 2rem);
     --bgColor: #1c1b1f;
     --lightBgColor: #29282e;
@@ -41,11 +46,17 @@ body {
     --leftMenuBg: #1d1c1fd4;
     --leftMenuBgBlur: blur(0.5rem);
     --standartBgBlur: blur(0.5rem);
+    --DevContainerWidth: clamp(10rem, 105vw, 1280px);
 
     --authHrBorder: 1px solid #ffffffca;
     --standartBorder: 1px solid white;
     --HeaderBorderColor: 1px solid white;
     --FooterBorderColor: 1px solid white;
+
+    --userAvatarImgSize: clamp(120px, 12vw, 20rem);
+    --userContainerWidth: clamp(160px, 65vw, 1280px);
+    --userLeftContainerWidth: 15rem;
+    --DWSLogoSize: clamp(120px, 12vw, 20rem);
 }
 
 .Container {
@@ -79,7 +90,8 @@ body {
 }
 
 
-.CodeText, code {
+.CodeText,
+code {
     margin: 0 .25rem 0 .25rem;
     background: var(--codeBgColor);
     border-radius: .2rem;
@@ -162,17 +174,23 @@ pre {
     display: inline-block;
     font-size: var(--smallFontSize);
 }
-.TopLiLink{
+
+.TopLiLink {
     color: var(--linkUnactiveColor);
     transition: color var(--standartDurationTime);
     cursor: pointer;
     text-decoration: none;
     font-size: var(--smallFontSize);
 }
-.TopLiLink:hover{
+
+.TopLiLink:hover {
     color: var(--linkActiveColor);
 }
-.DateSpan{
+
+.DateSpan {
     color: var(--unactiveFontColor);
     font-size: var(--smallFontSize);
+}
+a:hover{
+    text-decoration: underline; 
 }

@@ -12,10 +12,17 @@ import Index from './pages/index.jsx';
 import Catalog from './pages/Catalog.jsx';
 import Articles from './pages/Articles.jsx';
 import TextArticle from "./pages/TextArticle.jsx";
+import User from './Components/User/User.jsx';
+import AboutPage from './pages/AboutPage.jsx';
+import FAQ from './pages/FAQ.jsx';
+import Privacy from './pages/Privacy.jsx';
+import PolicyPage from './pages/PolicyPage.jsx';
+import EmployeesPage from './pages/EmployeesPage.jsx';
 //components
 import LeftMenu from "./Components/Articles/LeftMenu.jsx";
 import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
 import TwoFiltersPage from './Components/TwoFiltersPage/TwoFiltersPage.jsx';
+import MainUser from './pages/MainUser/MainUser.jsx';
 //
 const Route = createBrowserRouter([
 	{
@@ -28,6 +35,31 @@ const Route = createBrowserRouter([
 				element: <></>
 			}
 		]
+	},
+	{
+		path: '/about',
+		element: <AboutPage />,
+		errorElement: <ErrorPage404 />
+	},
+	{
+		path: '/FAQ',
+		element: <FAQ />,
+		errorElement: <ErrorPage404 />
+	},
+	{
+		path: '/privacy',
+		element: <Privacy />,
+		errorElement: <ErrorPage404 />
+	},
+	{
+		path: '/policy',
+		element: <PolicyPage />,
+		errorElement: <ErrorPage404 />
+	},
+	{
+		path: '/employees',
+		element: <EmployeesPage />,
+		errorElement: <ErrorPage404 />
 	},
 	{
 		path: '/catalog',
@@ -59,6 +91,13 @@ const Route = createBrowserRouter([
 		</>),
 		errorElement: <ErrorPage404 />,
 	},
+	{
+		path: '/user/:id',
+		element: (<>
+			<User RightMenu={MainUser} Title={"Страница пользователя"}></User>
+		</>),
+		errorElement: <ErrorPage404 />,
+	}
 ]);
 
 ReactDOM.createRoot(document.querySelector("#root")).render(

@@ -41,6 +41,7 @@ export const AccountBtnsContainer = styled.div`
 
 export const Btn = styled.a`
     margin: .2rem;
+    cursor: pointer;
     color: #ffffffca;
     text-decoration: none;
     transition: color .2s;
@@ -70,4 +71,77 @@ export const ListContainer = styled.ul`
 export const ListElem = styled.li`
     color: #ffffffca;
     cursor: pointer;
+`;
+export const AuthorizationContainer = styled.form`
+    border-radius: .2rem;
+    border: var(--HeaderBorderColor);
+    max-width: 320px;
+    margin: auto;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: var(--standartBgBlur);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-top: 0;
+    transform: translate(-50%, -110%);
+    z-index: 100;
+    transition: top var(--longDurationTime);
+`;
+export const Label = styled.label`
+    color: var(--unactiveFontColor);
+    font-size: var(--standartFontSize);
+`;
+export const InputData = styled.input`
+    background: var(--lightLinkBg);
+    padding: .2rem;
+    border-radius: .2rem;
+    margin: .5rem;
+    border: none;
+    color: var(--unactiveFontColor);
+    font-size: var(--standartFontSize);
+    &:focus{
+        color: var(--activeFontColor);
+        outline: none;
+    }
+`;
+export const Hr = styled.div`
+    border-bottom: var(--authHrBorder);
+    width: 100%;
+    margin: .5rem;
+`;
+export const AuthSpan = styled.span`
+    color: var(--unactiveFontColor);
+    font-size: var(--smallFontSize);
+    text-align: center;
+    margin: 0.5rem;
+`;
+export const SubmitBtn = styled.button`
+    padding: .2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: none;
+    border-radius: .2rem;
+    border: var(--standartBorder);
+    color: var(--unactiveFontColor);
+    font-size: var(--standartFontSize);
+    cursor: pointer;
+    transition: color var(--standartDurationTime);
+    &:hover{
+        color: var(--activeFontColor);
+        outline: none;
+    }
+`;
+export const DarkDiv = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    display: block;
+    z-index: -1;
+    transition: background var(--longDurationTime);
 `;
