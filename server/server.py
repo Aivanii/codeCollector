@@ -27,8 +27,13 @@ conn = create_connection_db(db_config["mysql"]["host"],
                             db_config["mysql"]["user"],
                             db_config["mysql"]["pass"],
                             "Test")
-
-
+cursor = conn.cursor()
+select_users_table = '''
+SELECT id, name, email, password FROM users;
+'''
+cursor.execute(select_users_table)
+query_result = cursor.fetchall()
+print(query_result)
 
 def url():
     pul = __file__.split('\\')
