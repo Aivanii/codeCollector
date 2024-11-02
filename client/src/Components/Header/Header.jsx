@@ -100,7 +100,7 @@ export default function Header() {
             <AuthorizationContainer id="AuthForm">
                 <AuthSpan>Авторизация</AuthSpan>
                 <Hr></Hr>
-                <Label htmlFor="authUsername">Имя пользователя:</Label>
+                <Label htmlFor="authUsername">Почта:</Label>
                 <InputData type="text" id="authUsername" name="authUsername" required></InputData>
                 <br></br>
                 <Label htmlFor="authPassword">Пароль:</Label>
