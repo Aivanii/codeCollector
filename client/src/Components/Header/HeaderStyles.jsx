@@ -19,7 +19,9 @@ export const HeaderContainer = styled.header`
 
 export const Img = styled.img`
   height: 100%;
-  padding: .2rem;
+  border-radius: 50%;
+  cursor: pointer;
+
 `;
 
 export const ImgHolder = styled.a`

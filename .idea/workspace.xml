@@ -6,19 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="ebed14b5-beab-44f8-94fa-0de516993cb7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/LeftMenuStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/LeftMenuStyles.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/MainArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/MainArticle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Footer/FooterStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Footer/FooterStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Micro_&amp;_Macro_tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Micro_&amp;_Macro_tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Promise.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Promise.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/Articles/test_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/test_article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/Articles/РаботасFetchвJavaScript.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/РаботасFetchвJavaScript.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/LeftMenuStyled.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/LeftMenuStyled.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/Top.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/Top.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/TopStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/TopStyles.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Header/HeaderStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Header/HeaderStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Header/SendAuthData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Header/SendAuthData.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/OneFilterPage/OneFilterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/OneFilterPage/OneFilterPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/TwoFiltersPage/TwoFiltersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/TwoFiltersPage/TwoFiltersPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/MainUser/MainUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/MainUser/MainUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/dump.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -7,11 +7,15 @@ import {
 import SendAuthData from "./SendAuthData";
 
 export default function Header() {
-    let isLogged = false;
+    const [userData, setUserdata] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/user', {withCredentials: true});
+                const response = await axios.get('http://localhost:8080/user', { withCredentials: true });
+                console.log(response.data);
+                if (response.data.users) {
+                    setUserdata(response.data);
+                }
             } catch {
                 alert("ошибка загрузки данных");
             }
@@ -81,24 +85,23 @@ export default function Header() {
                         </ListElem>
                     </ListContainer>
                 </nav>
-                {!isLogged
+                {!userData
                     ? <AccountBtnsContainer id="LogInPanel">
                         <Btn onClick={() => { setActiveForm("AuthForm") }}>LOGIN</Btn>
                         <AccountBtnSignUp onClick={() => { setActiveForm("SignForm") }}>SIGN UP</AccountBtnSignUp>
                     </AccountBtnsContainer>
                     :
-                    <>
-                        <span>тут должно быть
-                            <br></br>
-                            изображение пользователя</span>
-                    </>
+                    <AccountBtnsContainer>
+                        <Btn href="/user/testId(Header.jsx_95)">{userData.users}</Btn>
+                        <Img src="https://e7.pngegg.com/pngimages/416/62/png-clipart-anonymous-person-login-google-account-computer-icons-user-activity-miscellaneous-computer-thumbnail.png"></Img>
+                    </AccountBtnsContainer>
                 }
 
             </HeaderContainer>
             <AuthorizationContainer id="AuthForm">
                 <AuthSpan>Авторизация</AuthSpan>
                 <Hr></Hr>
-                <Label htmlFor="authUsername">Имя пользователя:</Label>
+                <Label htmlFor="authUsername">Почта:</Label>
                 <InputData type="text" id="authUsername" name="authUsername" required></InputData>
                 <br></br>
                 <Label htmlFor="authPassword">Пароль:</Label>
