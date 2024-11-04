@@ -12,10 +12,10 @@ export default function Header() {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:8080/user', { withCredentials: true });
-                console.log(response.data);
                 if (response.data.users) {
                     setUserdata(response.data);
                 }
+                console.log(response.data, userData);
             } catch {
                 alert("ошибка загрузки данных");
             }
@@ -85,7 +85,7 @@ export default function Header() {
                         </ListElem>
                     </ListContainer>
                 </nav>
-                {!userData
+                {userData
                     ? <AccountBtnsContainer id="LogInPanel">
                         <Btn onClick={() => { setActiveForm("AuthForm") }}>LOGIN</Btn>
                         <AccountBtnSignUp onClick={() => { setActiveForm("SignForm") }}>SIGN UP</AccountBtnSignUp>
