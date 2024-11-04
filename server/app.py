@@ -5,6 +5,7 @@ import mysql.connector
 from mysql.connector import Error
 from config import db_config
 app = Flask(__name__)
+CORS(app)
 cors = CORS(app, supports_credentials=True)
 app.config['SESSION_COOKIE_SECURE'] = False
 app.config['SECRET_KEY'] = 'cb02820a3e94d72c9f950ee10ef7e3f7a35b3f5b'
@@ -22,7 +23,6 @@ def create_connection_db(db_host, user_name, user_password, db_name = None):
     except Error as db_connection_error:
         print("Ошибка: ",db_connection_error)
     return connection_db
-
 conn = create_connection_db(db_config["mysql"]["host"],
                             db_config["mysql"]["user"],
                             db_config["mysql"]["pass"],
@@ -34,7 +34,6 @@ SELECT id, name, email, password FROM users;
 cursor.execute(select_users_table)
 query_result = cursor.fetchall()
 print(query_result)
-
 
 def url():
     pul = __file__.split('\\')
@@ -183,4 +182,4 @@ def user_out():
 def check():
     return "hello"
 if __name__ == "__main__":
-    app.run(debug=True,port=8080)
+    app.run(host='0.0.0.0', debug=True,port=8080)

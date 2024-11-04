@@ -1,4 +1,14 @@
 services:
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: azertea123!
+      MYSQL_DATABASE: Test
+    ports:
+      - "3306:3306"
+
   frontend:
     build:
       context: ./client
@@ -14,3 +24,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"  # Порт для Flask
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: azertea123!
+      DB_NAME: Test
+

@@ -43,6 +43,7 @@ export default function EmployersComponents() {
                                 <li>GitHub</li>
                                 <li>Bootstrap</li>
                                 <li>Python</li>
+                                <li>Docker</li>
                             </Ul>
                         </li>
                         <li>
