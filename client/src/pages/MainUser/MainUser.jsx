@@ -1,15 +1,19 @@
-import { Container, Label, Input, SubContainer, ImgContainer, Img } from "./MainUserStyles";
+import { Container, Label, Input, SubContainer, ImgContainer, Img, BtnSendImg, Btn } from "./MainUserStyles";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import SendUserNewData from "./SendUserNewData";
+import Deletesessia from "./DeleteSessia";
 export default function MainUser() {
-    const [userName, setUserName] = useState("Loading...");
-    const [userEmail, setUserEmail] = useState("Данные не передаются");
+    const [userdata, setUserdata] = useState({ name: "loading", email: "loading" });
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:8080/user', { withCredentials: true });
-                setUserName(response.data.users);
+                if (response.data.isLogged) {
+                    setUserdata(response.data);
+                    return;
+                }
+                setUserdata({ isLogged: false });
             } catch {
                 alert("ошибка загрузки данных");
             }
@@ -22,19 +26,39 @@ export default function MainUser() {
                 <ImgContainer>
                     <Img src="https://images.hdqwalls.com/download/anonymus-cyber-guy-p3-1336x768.jpg"
                         alt="Изображение пользовательского аватара" />
+                        <BtnSendImg 
+                        type="file" 
+                        id="imageInput" 
+                        accept="image/*"
+                        onChange = {() => SendUserNewData(
+                            userdata.id,
+                            "avatar",
+                            document.getElementById('imageInput').files[0]
+                        )}/>
                 </ImgContainer>
             </SubContainer>
             <SubContainer>
-                <Label htmlFor="UserUsername">Имя пользователя: </Label>
-                <Input type="text" id="UserUsername" name="UserUsername"
-                    value={userName}
-                    onChange={(e) => { setUserName(e.target.value) }}
-                    onBlur={(e) => { SendUserNewData(0, "name", e.target.value) }}>
-                </Input>
-                <Label htmlFor="UserEmail">Почта пользователя: </Label>
-                <Input type="text" id="UserEmail" name="UserEmail"
-                    value={userEmail} onChange={(e) => { setUserEmail(e.target.value) }}>
-                </Input>
+                <Label htmlFor="User Username">Имя пользователя: </Label>
+                <Input
+                    type="text"
+                    id="User Username"
+                    name="User Username"
+                    value={userdata.name}
+                    onChange={(e) => setUserdata({ ...userdata, name: e.target.value })}
+                    onBlur={(e) => SendUserNewData(userdata.id, "name", e.target.value)}
+                />
+
+                <Label htmlFor="User Email">Почта пользователя: </Label>
+                <Input
+                    type="text"
+                    id="User Email"
+                    name="User Email"
+                    value={userdata.email}
+                    onChange={(e) => setUserdata({ ...userdata, email: e.target.value })}
+                    onBlur={(e) => SendUserNewData(userdata.id, "email", e.target.value)}
+                />
+
+                <Btn onClick = {() => {Deletesessia()}}>Выйти из аккаунта</Btn>
             </SubContainer>
         </Container>
     );

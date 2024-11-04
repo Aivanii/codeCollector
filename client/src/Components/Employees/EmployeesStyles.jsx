@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const EmployeeContainer = styled.div`
-    border-radius: .2rem;
-    border: var(--standartBorder);
-    padding: .5rem;
+   min-width: 100%;
+   box-sizing: border-box;
+   padding: .5rem;
 `;
 
 export const Img = styled.img`
@@ -19,36 +19,47 @@ export const Ul = styled.ul`
     margin-left: 2rem;
     margin-bottom: 1rem;
 `;
-
-export const LeftArrow = styled.div`
-    position: fixed;
-    top: 50%;
-    left: 2rem;
-    transform: translate(-50%, 0);
-`;
-export const RightArrow = styled.div`
-    position: fixed;
-    top: 50%;
-    right: 2rem;
-    transform: translate(-50%, 0);
-`;
 export const Button = styled.button`
     background: none;
     font-size: var(--bigFontSize);
     color: var(--unactiveFontColor);
     border: none;
     cursor: pointer;
+    border: var(--standartBorder);
+    border-radius: .2rem;
     padding: .2rem;
+    width: 4rem;
+    height: 4rem;
     &:hover{
         color: var(--activeFontColor);
     }
 `;
+export const ButtonLeft = styled(Button)`
+    position: fixed;
+    top: 50%;
+    left: 2rem;
+    transform: translate(0, -50%);
+`;
+export const ButtonRight = styled(Button)`
+    position: fixed;
+    top: 50%;
+    right: 2rem;
+    transform: translate(0, -50%);
+`;
+
 
 export const Container = styled.div`
-    overflow: hidden;
-    width: 100%;
     position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border: var(--standartBorder);
+    
+   border-radius: .2rem;
 `;
 
 export const CarouselInner = styled.div`
+    display: flex;
+    transition: transform var(--longDurationTime) ease;
+    
 `;

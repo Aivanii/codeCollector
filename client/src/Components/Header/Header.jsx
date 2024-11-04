@@ -5,23 +5,25 @@ import {
     ListElem, AuthorizationContainer, InputData, Label, SubmitBtn, Hr, AuthSpan, DarkDiv
 } from "./HeaderStyles"
 import SendAuthData from "./SendAuthData";
+import { useNavigate  } from 'react-router-dom';
 
 export default function Header() {
+    const navigate = useNavigate ();
     const [userData, setUserdata] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:8080/user', { withCredentials: true });
-                if (response.data.users) {
+                if (response.data.isLogged) {
                     setUserdata(response.data);
                 }
-                console.log(response.data, userData);
             } catch {
                 alert("ошибка загрузки данных");
             }
         };
         fetchData();
     }, []);
+
     const [activeForm, setActiveForm] = useState(null);
 
     const changeTransformActiveForm = (event) => {
@@ -85,14 +87,14 @@ export default function Header() {
                         </ListElem>
                     </ListContainer>
                 </nav>
-                {userData
+                {!userData.isLogged
                     ? <AccountBtnsContainer id="LogInPanel">
                         <Btn onClick={() => { setActiveForm("AuthForm") }}>LOGIN</Btn>
                         <AccountBtnSignUp onClick={() => { setActiveForm("SignForm") }}>SIGN UP</AccountBtnSignUp>
                     </AccountBtnsContainer>
                     :
                     <AccountBtnsContainer>
-                        <Btn href="/user/testId(Header.jsx_95)">{userData.users}</Btn>
+                        <Btn onClick={() => {navigate(`/user/${userData.id}`); location. reload()}}>{userData.name}</Btn>
                         <Img src="https://e7.pngegg.com/pngimages/416/62/png-clipart-anonymous-person-login-google-account-computer-icons-user-activity-miscellaneous-computer-thumbnail.png"></Img>
                     </AccountBtnsContainer>
                 }

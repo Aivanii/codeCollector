@@ -1,10 +1,10 @@
 import { Text, ContainerTitle, Link } from ".././MainStyles";
-import { Img, Ul, EmployeeContainer, CarouselInner } from "./EmployeesStyles";
+import { Img, Ul, EmployeeContainer, CarouselInner, ButtonLeft, ButtonRight } from "./EmployeesStyles";
 export default function EmployersComponents() {
     return (
-        <>
-            <CarouselInner>
-                <EmployeeContainer className = "carousel-item">
+        <div >
+            <CarouselInner className="carousel-inner">
+                <EmployeeContainer className="carousel-item active">
                     <Img
                         src="https://i.ibb.co/6J7JFcZ/Haloween-V1.png"
                         alt="Аватар сотрудника ~vani~">
@@ -92,21 +92,19 @@ export default function EmployersComponents() {
                         <li>Почта: <Link href="mailto:aivanellok@gmail.com">aivanellok@gmail.com</Link></li>
                     </Ul>
                 </EmployeeContainer>
-            </CarouselInner>
 
 
 
 
 
-            <CarouselInner>
-                <EmployeeContainer className = "carousel-item">
+                <EmployeeContainer className="carousel-item">
                     <Img
-                        src="https://i.ibb.co/6J7JFcZ/Haloween-V1.png"
-                        alt="Аватар сотрудника ~vani~">
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvN_w4CfnttZ7S-dBfzkk22TGESASOlsK71GfUEw9nsBWU76vpBrbDrhh0VrEv3-Ccfxg&usqp=CAU"
+                        alt="Аватар сотрудника Bambaleyla">
                     </Img>
-                    <ContainerTitle>~vani~</ContainerTitle>
+                    <ContainerTitle>Bambaleyla</ContainerTitle>
                     <Text style={{ marginLeft: "1rem" }}>
-                        Я - Фронтенд-разработчик с более чем годом опыта в создании интуитивно понятных и отзывчивых веб-приложений.
+                        Я - не Фронтенд-разработчик с более чем годом опыта в создании интуитивно понятных и отзывчивых веб-приложений.
                         Обладаю сильными навыками в HTML, CSS и JavaScript, а также опытом работы с React и Vite. Умею эффективно
                         работать в команде и стремлюсь к постоянному обучению и профессиональному развитию.
                     </Text>
@@ -188,6 +186,6 @@ export default function EmployersComponents() {
                     </Ul>
                 </EmployeeContainer>
             </CarouselInner>
-        </>
+        </div>
     );
 }

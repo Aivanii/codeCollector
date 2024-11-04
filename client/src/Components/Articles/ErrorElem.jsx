@@ -11,11 +11,11 @@ const Span = styled.span`
     font-size: var(--bigFontSize);
 `;
 
-export default function ErrorElem(){
+export default function ErrorElem({text = "Ошибка загрузки материала"}){
     return(
         <Container>
             <Span>
-                Ошибка загрузки материала
+                {text}
             </Span>
         </Container>
     );

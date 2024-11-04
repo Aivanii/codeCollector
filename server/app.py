@@ -179,5 +179,8 @@ def user_out():
             'isLogged': False
         }
     )
+@app.route('/api/check')
+def check():
+    return "hello"
 if __name__ == "__main__":
     app.run(debug=True,port=8080)
