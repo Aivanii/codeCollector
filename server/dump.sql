@@ -28,7 +28,7 @@ CREATE TABLE `users` (
   `email` text NOT NULL,
   `password` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'bambaleyla','surname@gmail.com','123456789'),(3,'john','surname@gmail.com','987654321'),(4,'James','surname@gmail.com','123456789'),(6,'john','surname@gmail.com','987654321'),(7,'James','surname@gmail.com','123456789'),(9,'john','surname@gmail.com','987654321');
+INSERT INTO `users` VALUES (1,'bambaleyla','surname@gmail.com','123456789');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
