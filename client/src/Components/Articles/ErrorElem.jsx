@@ -10,7 +10,10 @@ const Span = styled.span`
     color: var(--unactiveFontColor);
     font-size: var(--bigFontSize);
 `;
-
+const ContainerRelative = styled.div`
+    position: relative;
+    text-align: center;
+`;
 export default function ErrorElem({text = "Ошибка загрузки материала"}){
     return(
         <Container>
@@ -18,5 +21,14 @@ export default function ErrorElem({text = "Ошибка загрузки мат�
                 {text}
             </Span>
         </Container>
+    );
+}
+export function ErrorElemRelative({text = "Ошибка загрузки материала"}){
+    return(
+        <ContainerRelative>
+            <Span>
+                {text}
+            </Span>
+        </ContainerRelative>
     );
 }

@@ -7,9 +7,6 @@ export const Container = styled.div`
 export const SubContainer = styled.div`
     display: flex;
     flex-direction: column;
-    #ImgHolder{
-        
-    }
 `;
 
 export const Label = styled.label`

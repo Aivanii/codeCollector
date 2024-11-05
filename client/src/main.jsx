@@ -23,6 +23,7 @@ import LeftMenu from "./Components/Articles/LeftMenu.jsx";
 import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
 import TwoFiltersPage from './Components/TwoFiltersPage/TwoFiltersPage.jsx';
 import MainUser from './pages/MainUser/MainUser.jsx';
+import HistoryUser from './pages/MainUser/HistoryUser.jsx';
 //
 const Route = createBrowserRouter([
 	{
@@ -95,6 +96,13 @@ const Route = createBrowserRouter([
 		path: '/user/:id',
 		element: (<>
 			<User RightMenu={MainUser} Title={"Страница пользователя"}></User>
+		</>),
+		errorElement: <ErrorPage404 />,
+	},
+	{
+		path: '/user/:id/history',
+		element: (<>
+			<User RightMenu={HistoryUser} Title={"История просмотров"}></User>
 		</>),
 		errorElement: <ErrorPage404 />,
 	}

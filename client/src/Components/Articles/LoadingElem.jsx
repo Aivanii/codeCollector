@@ -22,16 +22,27 @@ const Spinner = styled.div`
   animation: ${spin} 3s linear infinite;
 `;
 const Container = styled.div`
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
+const ContainerRelative = styled.div`
+  text-align: center;
 `;
 export default function LoadingElem() {
-    return (
-        <Container>
-            <LoadElem />
-            <Spinner />
-        </Container>
-    );
+  return (
+    <Container>
+      <LoadElem />
+      <Spinner />
+    </Container>
+  );
+}
+export function LoadingElemRelative() {
+  return (
+    <ContainerRelative>
+      <LoadElem />
+      <Spinner />
+    </ContainerRelative>
+  );
 }
