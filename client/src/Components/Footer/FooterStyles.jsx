@@ -1,18 +1,21 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+    
+`;
 export const FooterContainer = styled.footer`
     width: 100%;
     bottom: 0;
     margin-top: 5rem;
-    padding: 1rem;
     display: flex;
-    //flex-direction: column;
     flex-wrap: nowrap;
-    align-content: center;
+    align-content: flex-start;
     align-items: center;
     justify-content: space-around;
     border-top: var(--FooterBorderColor);
+    border-bottom: var(--FooterBorderColor);
     flex: 0 0 auto;
+
 `;
 
 export const Span = styled.span`
@@ -30,4 +33,16 @@ export const Link = styled.a`
     &:hover{
         color: white;
     }
+`;
+export const Hr = styled.div`
+    height: 6rem;
+    border-left: 1px solid #ffffffca;
+    padding: 2px;
+`;
+
+export const HorizontalHR = styled.div`
+    border-bottom: 1px solid #ffffffca;
+    width: 80%;
+    margin: auto;
+
 `;

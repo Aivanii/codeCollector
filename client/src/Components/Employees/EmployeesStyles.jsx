@@ -28,7 +28,7 @@ export const Button = styled.button`
     border: var(--standartBorder);
     border-radius: .2rem;
     padding: .2rem;
-    width: 4rem;
+    width: 2rem;
     height: 4rem;
     &:hover{
         color: var(--activeFontColor);
@@ -37,13 +37,13 @@ export const Button = styled.button`
 export const ButtonLeft = styled(Button)`
     position: fixed;
     top: 50%;
-    left: 2rem;
+    left: 3vw;
     transform: translate(0, -50%);
 `;
 export const ButtonRight = styled(Button)`
     position: fixed;
     top: 50%;
-    right: 2rem;
+    right: 3vw;
     transform: translate(0, -50%);
 `;
 
