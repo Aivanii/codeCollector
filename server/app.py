@@ -26,7 +26,7 @@ def create_connection_db(db_host, user_name, user_password, db_name = None):
 conn = create_connection_db(db_config["mysql"]["host"],
                             db_config["mysql"]["user"],
                             db_config["mysql"]["pass"],
-                            "Test")
+                            db_config["mysql"]["database"])
 cursor = conn.cursor()
 select_users_table = '''
 SELECT id, name, email, password FROM users;

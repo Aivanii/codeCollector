@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    
+    display: flex;
+    flex-direction: column;
 `;
 export const FooterContainer = styled.footer`
-    width: 100%;
+    width: 100vw;
+    position: fixed;
     bottom: 0;
     margin-top: 5rem;
     display: flex;
-    flex-wrap: nowrap;
-    align-content: flex-start;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
     border-top: var(--FooterBorderColor);
-    border-bottom: var(--FooterBorderColor);
-    flex: 0 0 auto;
-
+    align-content: flex-start;
+    align-items: baseline;
+    backdrop-filter: var(--standartBgBlur);
 `;
 
 export const Span = styled.span`
@@ -41,7 +41,6 @@ export const Hr = styled.div`
 `;
 
 export const HorizontalHR = styled.div`
-    border-bottom: 1px solid #ffffffca;
     width: 80%;
     margin: auto;
 

@@ -18,6 +18,7 @@ import FAQ from './pages/FAQ.jsx';
 import Privacy from './pages/Privacy.jsx';
 import PolicyPage from './pages/PolicyPage.jsx';
 import EmployeesPage from './pages/EmployeesPage.jsx';
+import SearchPage from './pages/SearchPage.jsx';
 //components
 import LeftMenu from "./Components/Articles/LeftMenu.jsx";
 import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
@@ -89,6 +90,13 @@ const Route = createBrowserRouter([
 			<Articles />
 			<LeftMenu></LeftMenu>
 			<TextArticle />
+		</>),
+		errorElement: <ErrorPage404 />,
+	},
+	{
+		path: '/search/:request',
+		element: (<>
+			<SearchPage />
 		</>),
 		errorElement: <ErrorPage404 />,
 	},

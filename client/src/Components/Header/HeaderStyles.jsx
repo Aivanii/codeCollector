@@ -67,11 +67,11 @@ export const ListContainer = styled.ul`
     display: flex;
     position: absolute;
     left: 50%;
-    justify-content: center;
     transform: translate(-50%, 0);
     gap: 10%;
     width: -webkit-fill-available;
     margin-top: -0.4rem;
+    justify-content: flex-start;
     @media (max-width: 700px) 
     {
         backdrop-filter: var(--standartBgBlur);
@@ -103,6 +103,12 @@ export const BurgerMenuIcon = styled.img`
     width: 3rem;
     height: 3rem;
     margin-left: -10px;
+    cursor: pointer;
+    display: none;
+    @media (max-width: 700px) 
+    {
+        display: block;
+    }
 `;
 export const ListElem = styled.li`
     color: #ffffffca;

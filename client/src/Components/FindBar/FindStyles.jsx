@@ -35,4 +35,5 @@ export const FindIcon = styled.img`
     width: 32px;
     height: 32px;
     margin-left: -2.5rem;
+    cursor: pointer;
 `;
