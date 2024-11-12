@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FindBar = styled.input`
-    width: clamp(30rem, 45vw, 50rem);
+    width: clamp(5rem, 75%, 38rem);
     height: 3rem;
     border-radius: .2rem;
     border: none;
@@ -20,8 +20,20 @@ export const FindBar = styled.input`
 
 export const FindBarContainer = styled.form`
     position: absolute;
-    left: 50%;
+    display: flex;
+    left: 0;
     top: 35%;
-    transform: translate(-50%, -50%);
-    
+    transform: translate(0, -50%);
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const FindIcon = styled.img`
+    width: 32px;
+    height: 32px;
+    margin-left: -2.5rem;
+    cursor: pointer;
 `;

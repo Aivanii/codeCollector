@@ -1,22 +1,19 @@
-import { FooterContainer, Span, Link } from "./FooterStyles"
+import { FooterContainer, Span, Link, Container} from "./FooterStyles"
 
 const FooterInner = (
     <>
-        <div>
+        <Container>
             <Link href="/privacy">Условия использования</Link>
-            <br></br>
             <Link href="/policy">Политика конфиденциальности</Link>
-            <br></br>
             <Link href="/employees">Наши сотрудники</Link>
-        </div>
-        <div>
+        </Container>
+        <Container>
             <Span>Мобильный телефон: <Link href = "tel:858123843288">+85 8123 8432 88</Link></Span>
-            <br></br>
             <Span>Электронная почта: <Link href = "mailto:govnocoders@mail.ru">govnocoders@mail.ru</Link></Span>
-        </div>
-        <div style={{ flex: "0 0 auto" }}>
+        </Container>
+        <Container style={{ flex: "0 0 auto" }}>
             <Span>©DWS 2022-2025</Span>
-        </div>
+        </Container>
     </>
 );
 

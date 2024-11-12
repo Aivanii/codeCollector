@@ -3,5 +3,6 @@ db_config = {
         "host": "localhost",
         "user": "root",
         "pass": "azertea123!",
+        "database": "Test"
     }
 }

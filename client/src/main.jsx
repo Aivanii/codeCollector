@@ -18,11 +18,13 @@ import FAQ from './pages/FAQ.jsx';
 import Privacy from './pages/Privacy.jsx';
 import PolicyPage from './pages/PolicyPage.jsx';
 import EmployeesPage from './pages/EmployeesPage.jsx';
+import SearchPage from './pages/SearchPage.jsx';
 //components
 import LeftMenu from "./Components/Articles/LeftMenu.jsx";
 import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
 import TwoFiltersPage from './Components/TwoFiltersPage/TwoFiltersPage.jsx';
 import MainUser from './pages/MainUser/MainUser.jsx';
+import HistoryUser from './pages/MainUser/HistoryUser.jsx';
 //
 const Route = createBrowserRouter([
 	{
@@ -92,9 +94,23 @@ const Route = createBrowserRouter([
 		errorElement: <ErrorPage404 />,
 	},
 	{
+		path: '/search/:request',
+		element: (<>
+			<SearchPage />
+		</>),
+		errorElement: <ErrorPage404 />,
+	},
+	{
 		path: '/user/:id',
 		element: (<>
 			<User RightMenu={MainUser} Title={"Страница пользователя"}></User>
+		</>),
+		errorElement: <ErrorPage404 />,
+	},
+	{
+		path: '/user/:id/history',
+		element: (<>
+			<User RightMenu={HistoryUser} Title={"История просмотров"}></User>
 		</>),
 		errorElement: <ErrorPage404 />,
 	}

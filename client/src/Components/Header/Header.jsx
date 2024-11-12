@@ -2,18 +2,20 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import {
     HeaderContainer, Img, ImgHolder, AccountBtnsContainer, Btn, AccountBtnSignUp, ListContainer,
-    ListElem, AuthorizationContainer, InputData, Label, SubmitBtn, Hr, AuthSpan, DarkDiv
+    ListElem, AuthorizationContainer, InputData, Label, SubmitBtn, Hr, AuthSpan, DarkDiv, BurgerMenuContainer,
+    BurgerMenuIcon
 } from "./HeaderStyles"
 import SendAuthData from "./SendAuthData";
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
+    const navigate = useNavigate();
     const [userData, setUserdata] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:8080/user', { withCredentials: true });
-                console.log(response.data);
-                if (response.data.users) {
+                if (response.data.isLogged) {
                     setUserdata(response.data);
                 }
             } catch {
@@ -22,6 +24,7 @@ export default function Header() {
         };
         fetchData();
     }, []);
+
     const [activeForm, setActiveForm] = useState(null);
 
     const changeTransformActiveForm = (event) => {
@@ -54,15 +57,28 @@ export default function Header() {
             document.removeEventListener("click", changeTransformActiveForm);
         };
     }, [activeForm]);
-
+    //alert(`width: ${screen.width}; height: ${screen.height}`);
     return (
         <>
             <HeaderContainer>
                 <ImgHolder href="/">
                     <Img src="https://i.postimg.cc/k5bY4r07/logo.png"></Img>
                 </ImgHolder>
+                <BurgerMenuContainer onClick={() => { document.querySelector("#navContainer").style.left = "50%"; }}>
+                    <BurgerMenuIcon
+                        alt="кнопка вызова бургер меню"
+                        src="https://img.icons8.com/ios-filled/50/FFFFFF/menu--v6.png"
+                    />
+                </BurgerMenuContainer>
                 <nav>
-                    <ListContainer>
+                    <ListContainer id="navContainer">
+                        <ListElem>
+                            <BurgerMenuIcon
+                                onClick={() => { document.querySelector("#navContainer").style.left = "-50%"; }}
+                                alt="кнопка закрытия бургер меню"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAABOCAYAAACOqiAdAAAACXBIWXMAAAsTAAALEwEAmpwYAAABSElEQVR4nO3a3U3DMBRAYS9Snnko00AZrXQIfrYClSUOihKkPpCmOM6VbJ9vgducJk3iOiVJkiRJkiRJkiS1B3gGPoATsAucezfNfB8+Q6ow2qUzsA+Yu59mXXpKtWD8tomMNxNt8JZqwXipEBXvSrTBMdUC2F05kKLxFqKdI39fiwDugc+ZA/oGHgrN+NpyRnPxaDXalvGaj7ZFvG6ilYzXXbQS8bqNtiZe99Fy4hktI57R8p/6Q94+Wjzz+rwRbBDPaBnxjPaXhRuB4TKjGW9FNOP98nEkwy0PtxGLoVXhHy/sxpvkvEZ1H48VS0PdxqPAelp38Si4CNlNPDZYuW0+Hhsudzcbj4D/CJqLx7jVyi0QGeFOM2eBm24q2ub1mmoBHCKjLcR7TDVhjDececfgrazDFrOXafYhaq4kSZIkSZIkSZJSnB/bQlVtktDrLwAAAABJRU5ErkJggg=="
+                            />
+                        </ListElem>
                         <ListElem>
                             <Btn href="/home">
                                 Home
@@ -85,14 +101,14 @@ export default function Header() {
                         </ListElem>
                     </ListContainer>
                 </nav>
-                {!userData
+                {!userData.isLogged
                     ? <AccountBtnsContainer id="LogInPanel">
                         <Btn onClick={() => { setActiveForm("AuthForm") }}>LOGIN</Btn>
                         <AccountBtnSignUp onClick={() => { setActiveForm("SignForm") }}>SIGN UP</AccountBtnSignUp>
                     </AccountBtnsContainer>
                     :
                     <AccountBtnsContainer>
-                        <Btn href="/user/testId(Header.jsx_95)">{userData.users}</Btn>
+                        <Btn onClick={() => { navigate(`/user/${userData.id}`); location.reload() }}>{userData.name}</Btn>
                         <Img src="https://e7.pngegg.com/pngimages/416/62/png-clipart-anonymous-person-login-google-account-computer-icons-user-activity-miscellaneous-computer-thumbnail.png"></Img>
                     </AccountBtnsContainer>
                 }

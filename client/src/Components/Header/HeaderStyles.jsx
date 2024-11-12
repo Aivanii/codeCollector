@@ -51,6 +51,10 @@ export const Btn = styled.a`
     &:hover{
         color: white;
     }
+    @media (max-width: 700px) 
+    {
+        font-size: var(--bigFontSize);
+    }
 `;
 
 export const AccountBtnSignUp = styled(Btn)`
@@ -63,13 +67,49 @@ export const ListContainer = styled.ul`
     display: flex;
     position: absolute;
     left: 50%;
-    justify-content: center;
     transform: translate(-50%, 0);
     gap: 10%;
     width: -webkit-fill-available;
     margin-top: -0.4rem;
+    justify-content: flex-start;
+    @media (max-width: 700px) 
+    {
+        backdrop-filter: var(--standartBgBlur);
+        background-color: var(--leftMenuBg);
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: -50%;
+        width: 100%;
+        top: 0;
+        padding: 2rem;
+        gap: 1rem;
+        height: 100%;
+        z-index: 1000;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: left var(--longDurationTime);
+    }
 `;
-
+export const BurgerMenuContainer = styled.div`
+    margin-left: -4vw;
+    display: none;
+    @media (max-width: 700px) 
+    {
+        display: block;
+    } 
+`;
+export const BurgerMenuIcon = styled.img`
+    width: 3rem;
+    height: 3rem;
+    margin-left: -10px;
+    cursor: pointer;
+    display: none;
+    @media (max-width: 700px) 
+    {
+        display: block;
+    }
+`;
 export const ListElem = styled.li`
     color: #ffffffca;
     cursor: pointer;
@@ -135,6 +175,7 @@ export const SubmitBtn = styled.button`
         color: var(--activeFontColor);
         outline: none;
     }
+
 `;
 export const DarkDiv = styled.div`
     position: fixed;

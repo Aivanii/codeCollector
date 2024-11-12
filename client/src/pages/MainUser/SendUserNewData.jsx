@@ -1,25 +1,22 @@
 import axios from 'axios';
-export default function SendUserNewData(userId, userField, userValue){
-    const Data = {
-        "id": userId,
-        [userField] : userValue
-    }
+export default function SendUserNewData(userId, userField, userValue) {
+    const Data = new FormData();
+    Data.append('id', userId);
+    Data.append(userField, userValue);
     console.log(Data)
     const fetchData = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/reg', data,
+            const response = await axios.post('http://localhost:8080/reg', Data,
                 {
                     withCredentials: true,
-                    headers: {
-                        'Content-Type': 'application/json;charset=utf-8'
-                    }
                 }
             );
             alert("успешно");
             console.log(JSON.stringify(response.data));
+            location.reload()
         } catch (error) {
             console.log('Catch block error:', error);
         }
-        fetchData();
     };
+    fetchData();
 }

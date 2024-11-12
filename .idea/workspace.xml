@@ -6,21 +6,35 @@
   <component name="ChangeListManager">
     <list default="true" id="ebed14b5-beab-44f8-94fa-0de516993cb7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Fetch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Micro_&amp;_Macro_tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Micro_&amp;_Macro_tasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Promise.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Promise.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/Articles/test_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/test_article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/Articles/РаботасFetchвJavaScript.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/Articles/РаботасFetchвJavaScript.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/LeftMenuStyled.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/LeftMenuStyled.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/Top.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/Top.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/TopStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/TopStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/INFO/db_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/INFO/db_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/INFO/Команды для обновления бд.txt" beforeDir="false" afterPath="$PROJECT_DIR$/INFO/Команды для обновления бд.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/ErrorElem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/ErrorElem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/LoadingElem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/LoadingElem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/MainArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/MainArticle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/BackgroundCirclies/BgCirclesStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/BackgroundCirclies/BgCirclesStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Employees/EmployeesStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Employees/EmployeesStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Employees/Employes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Employees/Employes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Employees/EmployesComponents.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Employees/EmployesComponents.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/FindBar/Find.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/FindBar/Find.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/FindBar/FindStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/FindBar/FindStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Footer/FooterStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Footer/FooterStyles.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Header/HeaderStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Header/HeaderStyles.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Header/SendAuthData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Header/SendAuthData.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/OneFilterPage/OneFilterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/OneFilterPage/OneFilterPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/PLBtns/PLBtnsStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/PLBtns/PLBtnsStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/User/LeftMenuItems.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/User/LeftMenuItems.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/User/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/User/User.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Catalog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Catalog.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/MainUser/MainUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/MainUser/MainUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/MainUser/MainUserStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/MainUser/MainUserStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/MainUser/SendUserNewData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/MainUser/SendUserNewData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/dump.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,110 +89,6 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="codeCollector" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="codeCollector" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Docutils task">
-      <module name="codeCollector" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Sphinx task">
-      <module name="codeCollector" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Autodetect">
-      <module name="codeCollector" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="codeCollector" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

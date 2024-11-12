@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: clamp(40rem, 55vw, 60rem);
+    width: 95%;
+    max-width: 720px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -11,7 +12,7 @@ export const Container = styled.div`
 export const Button = styled.button`
     height: 3rem;
     width: 100%;
-    font-size: 2rem;
+    font-size: var(--bigFontSize);
     background: none;
     border-radius: .2rem;
     border: 1px solid white;

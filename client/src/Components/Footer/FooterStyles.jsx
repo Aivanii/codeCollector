@@ -1,18 +1,21 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
 export const FooterContainer = styled.footer`
-    width: 100%;
+    width: 100vw;
+    position: fixed;
     bottom: 0;
     margin-top: 5rem;
-    padding: 1rem;
     display: flex;
-    //flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
     border-top: var(--FooterBorderColor);
-    flex: 0 0 auto;
+    align-content: flex-start;
+    align-items: baseline;
+    backdrop-filter: var(--standartBgBlur);
 `;
 
 export const Span = styled.span`
@@ -30,4 +33,15 @@ export const Link = styled.a`
     &:hover{
         color: white;
     }
+`;
+export const Hr = styled.div`
+    height: 6rem;
+    border-left: 1px solid #ffffffca;
+    padding: 2px;
+`;
+
+export const HorizontalHR = styled.div`
+    width: 80%;
+    margin: auto;
+
 `;

@@ -7,9 +7,6 @@ export const Container = styled.div`
 export const SubContainer = styled.div`
     display: flex;
     flex-direction: column;
-    #ImgHolder{
-        
-    }
 `;
 
 export const Label = styled.label`
@@ -35,26 +32,7 @@ export const ImgContainer = styled.div`
     position: relative;
     width: fit-content;
     margin: auto;
-    transition: opacity var(--standartDurationTime);
-    &:hover{
-        &::after{
-            opacity: 1;
-        }
-    }
-    &::after{
-        cursor: pointer;
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 98%;
-        height: 98%;
-        border-radius: 50%;
-        background-color: #0000006b;
-        border: 1px solid white;
-        opacity: 0;
-        z-index: 5;
-        }
+    
 `;
 
 export const Img = styled.img`
@@ -62,4 +40,39 @@ export const Img = styled.img`
     height: var(--userAvatarImgSize);
     border-radius: 50%;
     object-fit: cover;
+`;
+
+export const BtnSendImg = styled.input`
+    position: absolute;
+    width: var(--userAvatarImgSize);
+    height: var(--userAvatarImgSize);
+    border-radius: 50%;
+    z-index: 2;
+    background: #0000007d;
+    left: 0;
+    opacity: 0;
+    border: var(--standartBorder);
+    cursor: pointer;
+    transition: opacity var(--standartDurationTime);
+    &:hover{
+        opacity: 1;
+    }
+    &[type="file"]::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+`;
+
+export const Btn = styled.button`
+    background: none;
+    border: var(--standartBorder);
+    border-radius: .2rem;
+    padding: .2rem;
+    font-size: var(--standartFontSize);
+    margin: .5rem;
+    color: var(--unactiveFontColor);
+    transition: color var(--standartDurationTime);
+    &:hover{
+        color: var(--activeFontColor);
+    }
+    cursor: pointer;
 `;
