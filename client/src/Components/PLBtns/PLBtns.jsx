@@ -86,7 +86,7 @@ export default function PLBtns() {
                         url = "/articles/" + elem.replace(" ", "_") + "/" + newLi;
                         return (
                             <ListElem key={newLi}>
-                                <ListElemLink className = "ListElemLink" href = {url}>
+                                <ListElemLink className="ListElemLink" href={url}>
                                     {newLi}
                                 </ListElemLink>
                             </ListElem>
@@ -107,12 +107,14 @@ export default function PLBtns() {
             script.type = "module";
             document.body.appendChild(script);
         }
-        if(!document.querySelector(`script[src="src/Components/PLBtns/HideAndShowLists.js"]`)) createScript();
+        if (!document.querySelector(`script[src="src/Components/PLBtns/HideAndShowLists.js"]`)) createScript();
     }, []);
 
     return (
-        <Container>
-            {BtnsObjs}
-        </Container>
+        <main>
+            <Container style = {{marginTop: "0"}}>
+                {BtnsObjs}
+            </Container>
+        </main>
     );
 }

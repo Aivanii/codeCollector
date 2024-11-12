@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Frontend_Development">Frontend Development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Frontend_Development/TypeScript">TypeScript</a> </li>
+            </ul> <span class="DateSpan">12.11.2024</span>
+        </div>
+        <h1 class="TitleText">TypeScript: Синтаксис и основы</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">TypeScript — это надмножество JavaScript, которое добавляет статическую типизацию и другие функции, что делает его более мощным инструментом для разработки веб-приложений. TypeScript компилируется в чистый JavaScript, что позволяет использовать его в любых средах, поддерживающих JavaScript.</p>
+        
+        <h2 class="ThemeTitle">Что такое TypeScript?</h2>
+        <p class="Text">TypeScript — это язык программирования, который расширяет JavaScript, добавляя типы и другие возможности. Он помогает разработчикам находить ошибки на этапе компиляции, что улучшает качество кода и упрощает его поддержку.</p>
+
+        <h2 class="ThemeTitle">Синтаксис TypeScript</h2>
+        <p class="Text">TypeScript использует синтаксис JavaScript, но добавляет дополнительные конструкции для работы с типами. Вот некоторые ключевые аспекты синтаксиса TypeScript:</p>
+
+        <h3 class="ThemeTitle">Типы данных</h3>
+        <p class="Text">TypeScript поддерживает несколько типов данных, включая:</p>
+        <ul class="Text">
+            <li><strong>Примитивные типы:</strong> <code>number</code>, <code>string</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>.</li>
+            <li><strong>Массивы:</strong> Массивы могут быть объявлены с использованием типа элементов, например: <code>number[]</code> или <code>Array&lt;string&gt;</code>.</li>
+            <li><strong>Кортежи:</strong> Кортежи позволяют хранить элементы разных типов, например: <code>[string, number]</code>.</li>
+            <li><strong>Объекты:</strong> Объекты могут иметь заданные типы для своих свойств.</li>
+        </ul>
+
+        <h3 class="ThemeTitle">Пример объявления типов</h3>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+            </div>
+            <pre class="CodeboxCode">
+let age: number = 30;
+let name: string = "Alice";
+let isActive: boolean = true;
+let scores: number[] = [95, 82, 58];
+            </pre>
+        </div>
+
+        <h3 class="ThemeTitle">Интерфейсы</h3>
+        <p class="Text">Интерфейсы позволяют определять структуру объектов. Вот пример:</p>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+                <span class="SpanLine">10</span>
+                <span class="SpanLine">11</span>
+            </div>
+            <pre class="CodeboxCode">
+interface User {
+    name: string;
+    age: number;
+    isActive: boolean;
+}
+
+const user: User = {
+    name: "Alice",
+    age: 30,
+    isActive: true
+};
+            </pre>
+        </div>
+
+        <h3 class="ThemeTitle">Функции</h3>
+        <p class="Text">Функции в TypeScript могут иметь явно указанные типы параметров и возвращаемого значения:</p>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+            </div>
+            <pre class="CodeboxCode">
+function greet(name: string): string {
+    return `Hello, ${name}!`;
+}
+
+const greeting = greet("Alice");
+            </pre>
+        </div>
+
+        <h3 class="ThemeTitle">Классы</h3>
+        <p class="Text">TypeScript поддерживает классы, что позволяет использовать объектно-ориентированное программирование:</p>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+                <span class="SpanLine">10</span>
+            </div>
+            <pre class="CodeboxCode">
+class Animal {
+    constructor(public name: string) {}
+
+    speak(): string {
+        return `${this.name} makes a noise.`;
+    }
+}
+
+const dog = new Animal("Dog");
+console.log(dog.speak());
+            </pre>
+        </div>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">TypeScript — это мощный инструмент для разработки, который добавляет статическую типизацию к JavaScript. Понимание синтаксиса TypeScript и его возможностей поможет вам создавать более надежные и поддерживаемые приложения.</p>
+    </article>
+</main>

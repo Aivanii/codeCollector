@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi">
+                    <a class="TopLiLink" href="/home">Home</a>
+                </li>
+                <li class="TopLi">
+                    <a class="TopLiLink" href="/articles/Frontend_Development">Frontend Development</a>
+                </li>
+                <li class="TopLi">
+                    <a class="TopLiLink" href="/articles/Frontend_Development/React">React</a>
+                </li>
+            </ul>
+            <span class="DateSpan">12.11.2024</span>
+        </div>
+        <h1 class="TitleText">JSX в React</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">JSX (JavaScript XML) — это синтаксический сахар, который позволяет писать HTML-подобный код в
+            JavaScript, делая разработку компонентов React более интуитивной и удобной. В этой статье мы рассмотрим, что
+            такое JSX, как его использовать и какие преимущества он предоставляет.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+                <span class="SpanLine">10</span>
+                <span class="SpanLine">11</span>
+                <span class="SpanLine">12</span>
+            </div>
+            <pre class="CodeboxCode">
+import React from 'react';
+
+function App() {
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;Hello, World!&lt;/h1&gt;
+            &lt;p&gt;Welcome to my first React app!&lt;/p&gt;
+        &lt;/div&gt;
+    );
+}
+        
+export default App;
+    </pre>
+        </div>
+
+        <h2 class="ThemeTitle">Что такое JSX?</h2>
+        <p class="Text">JSX позволяет разработчикам писать разметку, которая выглядит как HTML, но на самом деле
+            является синтаксисом JavaScript. JSX компилируется в вызовы функции <code
+                class="CodeText">React.createElement()</code>, что позволяет React создавать элементы интерфейса.</p>
+
+        <h2 class="ThemeTitle">Преимущества использования JSX</h2>
+        <p class="Text">Использование JSX в React имеет несколько преимуществ:</p>
+        <ul class="Text">
+            <li>Более читаемый код: JSX делает структуру компонентов более понятной и визуально привлекательной.</li>
+            <li>Упрощенная работа с компонентами: вы можете легко комбинировать компоненты и передавать им свойства.
+            </li>
+            <li>Поддержка JavaScript: в JSX вы можете использовать выражения JavaScript, что позволяет динамически
+                изменять содержимое.</li>
+        </ul>
+
+        <h2 class="ThemeTitle">Пример использования JSX</h2>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+            </div>
+            <pre class="CodeboxCode">
+function Greeting(props) {
+    return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+                
+const element = &lt;Greeting name=&quot;Alice&quot; /&gt;;
+console.log(element); // React элемент
+    </pre>
+        </div>
+
+        <p class="Text">В этом примере мы создаем компонент <code class="CodeText">Greeting</code>, который принимает
+            свойство <code class="CodeText">name</code> и отображает приветственное сообщение.</p>
+
+        <h2 class="ThemeTitle">JSX и JavaScript выражения</h2>
+        <p class="Text">JSX позволяет использовать JavaScript выражения внутри фигурных скобок. Например:</p>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+            </div>
+            <pre class="CodeboxCode">
+const name = &quot;Bob&quot;;
+const element = &lt;h1&gt;Hello, {name}&lt;/h1&gt;;
+    </pre>
+        </div>
+
+        <p class="Text">В этом примере переменная <code class="CodeText">name</code> используется внутри JSX для
+            динамического отображения имени.</p>
+
+        <p class="Text">JSX — это мощный инструмент, который делает разработку на React более удобной и продуктивной.
+            Понимание его основ поможет вам создавать более сложные и интерактивные интерфейсы.</p>
+    </article>
+</main>

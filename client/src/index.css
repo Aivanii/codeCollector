@@ -27,9 +27,11 @@ body {
 
 main {
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 0fr auto;
     min-height: 80vh;
+    margin-bottom: 1rem;
 }
+
 
 :root {
     --codeFontColor: #b5b5b5;
@@ -137,6 +139,9 @@ code {
     font-size: var(--smallFontSize);
     line-height: 1.416;
 }
+.Text li {
+    margin-left: 2rem;
+}
 
 pre {
     line-height: 1.2;
@@ -160,8 +165,11 @@ pre {
 .TopContainer {
     margin: auto;
     width: var(--articleActiveWidth);
+    margin-top: 0;
 }
-
+.ArticleContainer{
+    margin-top: 0;
+}
 .FlexContainer {
     display: flex;
     flex-direction: row;

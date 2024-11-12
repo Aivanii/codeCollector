@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+<div class="TopContainer">
+    <div class="FlexContainer">
+        <ul class="TopUl">
+            <li class="TopLi">
+                <a class="TopLiLink" href="/home">Home</a>
+            </li>
+            <li class="TopLi">
+                <a class="TopLiLink" href="/articles/Frontend_Development">Frontend Development</a>
+            </li>
+            <li class="TopLi">
+                <a class="TopLiLink" href="/articles/Frontend_Development/JavaScript">JavaScript</a>
+            </li>
+        </ul>
+        <span class="DateSpan">12.11.2024</span>
+    </div>
+    <h1 class="TitleText">Способы объявления переменных в JavaScript</h1>
+</div>
+<article class = "ArticleContainer">
+<p class="Text">Чистые функции — это важный концепт в функциональном программировании и JavaScript. Они обладают двумя основными свойствами: они всегда возвращают одно и то же значение для одних и тех же входных данных и не имеют побочных эффектов. В этой статье мы рассмотрим, что такое чистые функции и как их использовать.</p>
+
+<div class="CodeContainer">
+    <div class="SpanCodeboxLine">
+        <span class="SpanLine">1</span>
+        <span class="SpanLine">2</span>
+        <span class="SpanLine">3</span>
+        <span class="SpanLine">4</span>
+        <span class="SpanLine">5</span>
+        <span class="SpanLine">6</span>
+    </div>
+    <pre class="CodeboxCode">
+function add(a, b) {
+    return a + b; // Чистая функция
+}
+
+let result = add(2, 3); // Всегда возвращает 5
+console.log(result); // 5
+</pre>
+</div>
+
+<h2 class="ThemeTitle">Свойства чистых функций</h2>
+<p class="Text">Основные свойства чистых функций:</p>
+<ul class="Text">
+    <li>Не изменяют внешние состояния.</li>
+    <li>Не зависят от внешних состояний.</li>
+</ul>
+
+<h2 class="ThemeTitle">Преимущества чистых функций</h2>
+<p class="Text">Чистые функции имеют несколько преимуществ:</p>
+<ul class="Text">
+    <li>Легче тестировать: можно проверять только входные и выходные данные.</li>
+    <li>Легче понимать: поведение функции предсказуемо.</li>
+    <li>Упрощают отладку: отсутствие побочных эффектов делает код более надежным.</li>
+</ul>
+
+<h2 class="ThemeTitle">Пример некорректной функции</h2>
+<div class="CodeContainer">
+    <div class="SpanCodeboxLine">
+        <span class="SpanLine">1</span>
+        <span class="SpanLine">2</span>
+        <span class="SpanLine">3</span>
+        <span class="SpanLine">4</span>
+        <span class="SpanLine">5</span>
+        <span class="SpanLine">6</span>
+        <span class="SpanLine">7</span>
+        <span class="SpanLine">8</span>
+    </div>
+    <pre class="CodeboxCode">
+let count = 0;
+
+function increment() {
+    count++; // Некоторая побочная функция
+}
+
+increment();
+console.log(count); // 1
+</pre>
+</div>
+
+<p class="Text">В этом примере функция <code class="CodeText">increment</code> изменяет внешнее состояние переменной <code class="CodeText">count</code>, что делает её нечистой.</p>
+
+<p class="Text">Чистые функции являются основой функционального программирования и помогают создавать более надежный и поддерживаемый код. Использование чистых функций в вашем коде может значительно улучшить его качество и тестируемость.</p>
+</article>
+</main>

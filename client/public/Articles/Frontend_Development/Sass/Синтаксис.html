@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Frontend_Development">Frontend Development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Frontend_Development/SASS">SASS</a> </li>
+            </ul> <span class="DateSpan">12.11.2024</span>
+        </div>
+        <h1 class="TitleText">SASS: Синтаксис и основы</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">SASS (Syntactically Awesome Style Sheets) — это расширение CSS, которое добавляет мощные возможности для написания стилей. Он позволяет использовать переменные, вложенные правила, миксины и другие функции, которые делают CSS более удобным и эффективным.</p>
+        
+        <h2 class="ThemeTitle">Что такое SASS?</h2>
+        <p class="Text">SASS — это препроцессор CSS, который позволяет писать стили с использованием более сложного синтаксиса. Он компилируется в стандартный CSS, который затем может быть использован в веб-приложениях.</p>
+
+        <h2 class="ThemeTitle">Синтаксис SASS</h2>
+        <p class="Text">SASS поддерживает два основных синтаксиса:</p>
+        <ul class="Text">
+            <li><strong>SASS (отступный синтаксис):</strong> Использует отступы вместо фигурных скобок и точек с запятой.</li>
+            <li><strong>SCSS (Sassy CSS):</strong> Более похож на стандартный CSS и использует фигурные скобки и точки с запятой.</li>
+        </ul>
+
+        <h3 class="ThemeTitle">Пример SASS (отступный синтаксис)</h3>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+            </div>
+            <pre class="CodeboxCode">
+$primary-color: #3498db
+
+body
+  background-color: $primary-color
+  color: white
+
+h1
+  font-size: 2em
+  margin: 0
+            </pre>
+        </div>
+
+        <h3 class="ThemeTitle">Пример SCSS (стандартный синтаксис)</h3>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+                <span class="SpanLine">10</span>
+                <span class="SpanLine">11</span>
+            </div>
+            <pre class="CodeboxCode">
+$primary-color: #3498db;
+
+body {
+  background-color: $primary-color;
+  color: white;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+            </pre>
+        </div>
+
+        <h2 class="ThemeTitle">Переменные в SASS</h2>
+        <p class="Text">Переменные в SASS позволяют хранить значения, которые можно использовать повторно. Например, вы можете определить цвет в переменной и использовать его в разных местах вашего кода.</p>
+
+        <h2 class="ThemeTitle">Вложенные правила</h2>
+        <p class="Text">SASS позволяет использовать вложенные правила, что делает код более структурированным и понятным. Вот пример:</p>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+            </div>
+            <pre class="CodeboxCode">
+nav
+  ul
+    list-style: none
+  li
+    display: inline-block
+            </pre>
+        </div>
+
+        <h2 class="ThemeTitle">Миксины</h2>
+        <p class="Text">Миксины позволяют создавать повторно используемые блоки стилей. Например:</p>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+            </div>
+            <pre class="CodeboxCode">
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+.box
+  @include border-radius(10px)
+            </pre>
+        </div>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">SASS — это мощный инструмент для написания стилей, который позволяет улучшить структуру и удобство работы с CSS. Понимание синтаксиса SASS и его возможностей поможет вам создавать более эффективные и поддерживаемые стили для ваших веб-приложений.</p>
+    </article>
+</main>
