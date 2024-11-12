@@ -6,7 +6,7 @@ export const Circle = styled.div`
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
             linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
             linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 100%;
     transform: translate(-400px, -200px);

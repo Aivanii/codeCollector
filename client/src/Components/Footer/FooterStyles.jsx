@@ -5,10 +5,8 @@ export const Container = styled.div`
     flex-direction: column;
 `;
 export const FooterContainer = styled.footer`
-    width: 100vw;
-    position: fixed;
     bottom: 0;
-    margin-top: 5rem;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

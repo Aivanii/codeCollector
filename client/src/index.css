@@ -19,6 +19,16 @@ body {
     position: relative;
     font-family: "Kabrio", "Arial", sans-serif;
     color: var(--unactiveFontColor);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 80vh;
 }
 
 :root {
@@ -192,6 +202,7 @@ pre {
     color: var(--unactiveFontColor);
     font-size: var(--smallFontSize);
 }
-a:hover{
-    text-decoration: underline; 
+
+a:hover {
+    text-decoration: underline;
 }
