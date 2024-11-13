@@ -6,6 +6,7 @@ from mysql.connector import Error
 from config import db_config
 import json
 from transliterate import translit
+import re
 app = Flask(__name__)
 CORS(app)
 cors = CORS(app, supports_credentials=True)
@@ -229,39 +230,40 @@ def send_history():
     )
 @app.route('/search/<quest>', methods=['GET'])
 def search(quest):
+    quest = re.split('[,;:.\n?!@#$%^&*() ]+', quest)
     result = []
     s = url() + 'client/public/Articles/'
     files = os.listdir(s)
-    quest = translit(quest, language_code='ru', reversed=True)
+
     def add_to_results(path, title):
         """Добавляет элемент в результат, если он уникален."""
         href = '..' + s.split('public')[1] + path
         if not any(item['title'] == title and item['href'] == href for item in result):
             result.append({'title': title, 'href': href})
-
-    for x in files:
-        res = protect(x, quest)
-        if res:
-            fil1 = os.listdir(s + res)
-            for y in fil1:
-                fil2 = os.listdir(s + res + '/' + y)
-                for z in fil2:
-                    add_to_results(f"{res}/{y}/{z}", z[:-5])
-
-        fil2 = os.listdir(s + x)
-        for y in fil2:
-            res = protect(y, quest)
+    for qur in quest:
+        qur = translit(qur, language_code='ru', reversed=True)
+        for x in files:
+            res = protect(x, qur)
             if res:
-                product = os.listdir(s + x + '/' + res)
-                for z in product:
-                    add_to_results(f"{x}/{res}/{z}", z[:-5])
+                fil1 = os.listdir(s + res)
+                for y in fil1:
+                    fil2 = os.listdir(s + res + '/' + y)
+                    for z in fil2:
+                        add_to_results(f"{res}/{y}/{z}", z[:-5])
 
-            prod = os.listdir(s + x + '/' + y)
-            for z in prod:
-                res = protect(z[:-5], quest)
+            fil2 = os.listdir(s + x)
+            for y in fil2:
+                res = protect(y, qur)
                 if res:
-                    add_to_results(f"{x}/{y}/{res}.html", z[:-5])
+                    product = os.listdir(s + x + '/' + res)
+                    for z in product:
+                        add_to_results(f"{x}/{res}/{z}", z[:-5])
 
+                prod = os.listdir(s + x + '/' + y)
+                for z in prod:
+                    res = protect(z[:-5], qur)
+                    if res:
+                        add_to_results(f"{x}/{y}/{res}.html", z[:-5])
     return jsonify(result)
 
 @app.route('/database', methods = ['GET'])
