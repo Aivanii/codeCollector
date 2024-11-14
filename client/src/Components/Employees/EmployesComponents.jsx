@@ -1,11 +1,9 @@
 import { Text, ContainerTitle, Link } from ".././MainStyles";
-import { Img, Ul, EmployeeContainer, CarouselInner} from "./EmployeesStyles";
+import { Img, Ul, EmployeeContainer, CarouselInner } from "./EmployeesStyles";
 export default function EmployersComponents() {
     return (
         <div >
-            <CarouselInner className="carousel-inner">
-                <EmployeeContainer className="carousel-item active">
-        <div >
+
             <CarouselInner className="carousel-inner">
                 <EmployeeContainer className="carousel-item active">
                     <Img
@@ -99,10 +97,6 @@ export default function EmployersComponents() {
                 </EmployeeContainer>
 
 
-
-
-
-                <EmployeeContainer className="carousel-item">
                 <EmployeeContainer className="carousel-item">
                     <Img
                         src="https://i.ibb.co/Hg89w9Q/image.webp"
@@ -111,7 +105,7 @@ export default function EmployersComponents() {
                     <ContainerTitle>Bambaleyla</ContainerTitle>
                     <ContainerTitle>Bambaleyla</ContainerTitle>
                     <Text style={{ marginLeft: "1rem" }}>
-                    Я - Бэкенд-разработчик с более чем годом опыта в создании интуитивно понятных и отзывчивых веб-приложений. Обладаю сильными навыками в JavaScript, Node.js, Python, а также опытом работы с такими фреймворками как Express, Flask. Умею эффективно работать в команде и стремлюсь к постоянному обучению и профессиональному развитию.
+                        Я - Бэкенд-разработчик с более чем годом опыта в создании интуитивно понятных и отзывчивых веб-приложений. Обладаю сильными навыками в JavaScript, Node.js, Python, а также опытом работы с такими фреймворками как Express, Flask. Умею эффективно работать в команде и стремлюсь к постоянному обучению и профессиональному развитию.
                     </Text>
                     <ContainerTitle>Опыт работы</ContainerTitle>
                     <Ul>
@@ -186,7 +180,6 @@ export default function EmployersComponents() {
                     </Ul>
                 </EmployeeContainer>
             </CarouselInner>
-        </div>
         </div>
     );
 }

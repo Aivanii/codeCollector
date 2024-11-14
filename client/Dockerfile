@@ -12,7 +12,6 @@ RUN npm install
 COPY . .
 
 RUN npm install -g vite
-   
 # Запускаем сборку приложения
 RUN npm run build
 
