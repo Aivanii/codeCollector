@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { FindBar, FindBarContainer, FindIcon } from "./FindStyles";
+import { useState } from "react";
+import { FindBar, FindBarContainer, FindIcon } from "./FindStyles";
 
 export default function Find() {
     const [value, setValue] = useState("");

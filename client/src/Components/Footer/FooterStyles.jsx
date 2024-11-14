@@ -4,13 +4,21 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 `;
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
 export const FooterContainer = styled.footer`
     bottom: 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     border-top: var(--FooterBorderColor);
+    align-content: flex-start;
+    align-items: baseline;
+    backdrop-filter: var(--standartBgBlur);
     align-content: flex-start;
     align-items: baseline;
     backdrop-filter: var(--standartBgBlur);
@@ -31,6 +39,17 @@ export const Link = styled.a`
     &:hover{
         color: white;
     }
+`;
+export const Hr = styled.div`
+    height: 6rem;
+    border-left: 1px solid #ffffffca;
+    padding: 2px;
+`;
+
+export const HorizontalHR = styled.div`
+    width: 80%;
+    margin: auto;
+
 `;
 export const Hr = styled.div`
     height: 6rem;

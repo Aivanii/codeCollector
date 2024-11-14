@@ -7,8 +7,8 @@ export default function DeleteSessia() {
                 withCredentials: true,
             }
         );
-        
-        //window.location.href = '/';
+
+        window.location.href = '/';
     } catch (error) {
         console.log('Catch block error:', error);
     }

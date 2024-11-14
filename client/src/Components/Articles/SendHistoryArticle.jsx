@@ -1,7 +1,7 @@
 import axios from 'axios';
 export default async function SendHistoryArticle(data) {
     try {
-        await axios.post(`http://localhost:8080/ccылку сюда, б`, data,
+        await axios.post(`http://localhost:8080/send_history`, data,
             {
                 withCredentials: true,
                 headers: {

@@ -4,6 +4,9 @@ import os
 import mysql.connector
 from mysql.connector import Error
 from config import db_config
+import json
+from transliterate import translit
+import re
 app = Flask(__name__)
 CORS(app)
 cors = CORS(app, supports_credentials=True)
@@ -28,13 +31,6 @@ conn = create_connection_db(db_config["mysql"]["host"],
                             db_config["mysql"]["pass"],
                             db_config["mysql"]["database"])
 cursor = conn.cursor()
-select_users_table = '''
-SELECT id, name, email, password FROM users;
-'''
-cursor.execute(select_users_table)
-query_result = cursor.fetchall()
-print(query_result)
-
 def url():
     pul = __file__.split('\\')
     urls = []
@@ -44,6 +40,15 @@ def url():
         else:
             break
     return '/'.join(urls) + '/'
+def protect(str1, str2):
+    i = 0
+    for char1, char2 in zip(str1, str2):
+        if char1 == char2:
+            i += 1
+    if i / len(str1) * 100 >= 30:
+        return str1
+    else:
+        return False
 @app.route('/articles/<filter1>/<filter2>/<article>', methods = ['GET'])
 def statis(filter1,filter2,article):
     with open(url() +'client/public/Articles/'+filter1+'/'+filter2+ '/' + article.replace(" ", "_") + '.html', 'r', encoding='utf-8') as file:
@@ -80,7 +85,6 @@ def filtr(filter1):
 @app.route('/log', methods = ['POST'])
 def login():
     data = request.get_json()
-    cursor = conn.cursor()
     select_users_table = '''
     SELECT id, name, email, password FROM users WHERE email = %s;
     '''
@@ -109,7 +113,6 @@ def login():
 @app.route('/user', methods = ['GET'])
 def user():
     if session.get('id'):
-        cursor = conn.cursor()
         select_users_table = '''
         SELECT * FROM users WHERE id = %s;
         '''
@@ -135,7 +138,6 @@ def user():
 @app.route('/reg', methods = ['POST'])
 def reg():
     data = request.get_json()
-    cursor = conn.cursor()
     select_users_table = '''
     SELECT email FROM users WHERE email = %s;
     '''
@@ -159,7 +161,6 @@ def reg():
         cursor.execute(select_users, (data['email'],))
         result = cursor.fetchone()
         session['id'] = result[0]
-        print(session['id'])
         return jsonify(
             {
                 'id': result[0],
@@ -170,12 +171,166 @@ def reg():
                 'isLogged': True
             }
         )
-@app.route('/user_out', methods = ['GET'])
+@app.route('/set_history', methods = ['GET'])
+def set_history():
+    print(session.get('id'))
+    select_users_table_history = '''
+    SELECT history 
+    FROM users
+    WHERE 
+        id = %s;
+    '''
+    cursor.execute(select_users_table_history, (session.get('id'),))
+    result = cursor.fetchone()
+    print(json.loads(result[0]))
+    return jsonify(
+        json.loads(result[0])
+    )
+@app.route('/user_out', methods = ['POST'])
 def user_out():
     session['id'] = None
     return jsonify(
         {
             'isLogged': False
+        }
+    )
+
+@app.route('/send_history', methods = ['POST'])
+def send_history():
+    data = request.get_json()
+    select_users_table_history = '''
+    SELECT history 
+    FROM users
+    WHERE 
+        id = %s;
+    '''
+    cursor.execute(select_users_table_history, (session.get('id'),))
+    result = json.loads(cursor.fetchone()[0])
+    flag = False
+    for x in result:
+        if json.dumps(x) == json.dumps(data):
+            result = [lst for lst in result if lst != x]
+            result.append(data)
+            flag = True
+            break
+
+    if len(result) == 10 and not flag:
+        result = result[1:]
+        result.append(data)
+    elif not flag:
+        result.append(data)
+
+    update_users_table = '''
+    UPDATE USERS SET history = %s WHERE id = %s;
+    '''
+    cursor.execute(update_users_table, (json.dumps(result), session.get('id'),))
+    conn.commit()
+    return jsonify(
+        result
+    )
+@app.route('/search/<quest>', methods=['GET'])
+def search(quest):
+    quest = re.split('[,;:.\n?!@#$%^&*() ]+', quest)
+    result = []
+    s = url() + 'client/public/Articles/'
+    files = os.listdir(s)
+
+    def add_to_results(path, title):
+        """Добавляет элемент в результат, если он уникален."""
+        href = '..' + s.split('public')[1] + path
+        if not any(item['title'] == title and item['href'] == href for item in result):
+            result.append({'title': title, 'href': href})
+    for qur in quest:
+        qur = translit(qur, language_code='ru', reversed=True)
+        for x in files:
+            res = protect(x, qur)
+            if res:
+                fil1 = os.listdir(s + res)
+                for y in fil1:
+                    fil2 = os.listdir(s + res + '/' + y)
+                    for z in fil2:
+                        add_to_results(f"{res}/{y}/{z}", z[:-5])
+
+            fil2 = os.listdir(s + x)
+            for y in fil2:
+                res = protect(y, qur)
+                if res:
+                    product = os.listdir(s + x + '/' + res)
+                    for z in product:
+                        add_to_results(f"{x}/{res}/{z}", z[:-5])
+
+                prod = os.listdir(s + x + '/' + y)
+                for z in prod:
+                    res = protect(z[:-5], qur)
+                    if res:
+                        add_to_results(f"{x}/{y}/{res}.html", z[:-5])
+    return jsonify(result)
+
+@app.route('/database', methods = ['GET'])
+def database():
+    return jsonify(
+        {
+            "Frontend Development": [
+                "JavaScript",
+                "React",
+                "Vue.js",
+                "Angular",
+                "HTML",
+                "CSS",
+                "Sass",
+                "TypeScript"
+            ],
+            "Backend Development": [
+                "Python",
+                "Java",
+                "Ruby",
+                "Fortran",
+                "Node.js",
+                "PHP",
+                "Go",
+                "C#",
+                "Rust"
+            ],
+            "Game Development": [
+                "C#",
+                "C++",
+                "Lua",
+                "Unity",
+                "Unreal Engine",
+                "Godot",
+                "GameMaker"
+            ],
+            "AI": [
+                "Python",
+                "TensorFlow",
+                "PyTorch",
+                "Keras",
+                "Scikit-learn",
+                "OpenAI Gym"
+            ],
+            "Mobile Development": [
+                "Swift",
+                "Kotlin",
+                "React Native",
+                "Flutter"
+            ],
+            "DevOps": [
+                "Docker",
+                "Kubernetes",
+                "Ansible",
+                "Terraform"
+            ],
+            "Database Management": [
+                "MySQL",
+                "PostgreSQL",
+                "MongoDB",
+                "SQLite"
+            ],
+            "Cloud Computing": [
+                "AWS",
+                "Azure",
+                "Google Cloud Platform"
+            ]
         }
     )
 @app.route('/api/check')

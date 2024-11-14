@@ -7,12 +7,12 @@ import axios from 'axios';
 export default function HistoryUser() {
     const [historyContainers, setHistoryContainers] = useState([]);
     const [loadingStatus, setLoadingStatus] = useState("loading");
-
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                const response = await axios.get('http://localhost:8080/user', { withCredentials: true });
-                //setHistoryContainers(response.data); 
+             try {
+                const response = await axios.get('http://localhost:8080/set_history', { withCredentials: true });
+                console.log(response.data)
+                setHistoryContainers(response.data);
                 setLoadingStatus("success");
             } catch {
                 setLoadingStatus("failed");
@@ -30,7 +30,6 @@ export default function HistoryUser() {
                 <FilterContainer>
                     <Ul>
                         <Li>
-                            <Link href="/">Home</Link>
                         </Li>
                         ❯
                         <Li>

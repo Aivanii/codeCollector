@@ -5,6 +5,9 @@ export default function EmployersComponents() {
         <div >
             <CarouselInner className="carousel-inner">
                 <EmployeeContainer className="carousel-item active">
+        <div >
+            <CarouselInner className="carousel-inner">
+                <EmployeeContainer className="carousel-item active">
                     <Img
                         src="https://i.ibb.co/6J7JFcZ/Haloween-V1.png"
                         alt="Аватар сотрудника ~vani~">
@@ -43,6 +46,7 @@ export default function EmployersComponents() {
                                 <li>GitHub</li>
                                 <li>Bootstrap</li>
                                 <li>Python</li>
+                                <li>Docker</li>
                                 <li>Docker</li>
                             </Ul>
                         </li>
@@ -99,10 +103,12 @@ export default function EmployersComponents() {
 
 
                 <EmployeeContainer className="carousel-item">
+                <EmployeeContainer className="carousel-item">
                     <Img
                         src="https://i.ibb.co/Hg89w9Q/image.webp"
                         alt="Аватар сотрудника Bambaleyla">
                     </Img>
+                    <ContainerTitle>Bambaleyla</ContainerTitle>
                     <ContainerTitle>Bambaleyla</ContainerTitle>
                     <Text style={{ marginLeft: "1rem" }}>
                     Я - Бэкенд-разработчик с более чем годом опыта в создании интуитивно понятных и отзывчивых веб-приложений. Обладаю сильными навыками в JavaScript, Node.js, Python, а также опытом работы с такими фреймворками как Express, Flask. Умею эффективно работать в команде и стремлюсь к постоянному обучению и профессиональному развитию.
@@ -180,6 +186,7 @@ export default function EmployersComponents() {
                     </Ul>
                 </EmployeeContainer>
             </CarouselInner>
+        </div>
         </div>
     );
 }
