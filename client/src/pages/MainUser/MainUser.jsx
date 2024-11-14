@@ -10,6 +10,7 @@ export default function MainUser() {
             try {
                 const response = await axios.get('http://localhost:8080/user', { withCredentials: true });
                 if (response.data.isLogged) {
+                    console.log(response.data);
                     setUserdata(response.data);
                     return;
                 }
@@ -24,7 +25,7 @@ export default function MainUser() {
         <Container>
             <SubContainer>
                 <ImgContainer>
-                    <Img src="https://images.hdqwalls.com/download/anonymus-cyber-guy-p3-1336x768.jpg"
+                    <Img src={userdata.imgAdress}
                         alt="Изображение пользовательского аватара" />
                         <BtnSendImg 
                         type="file" 

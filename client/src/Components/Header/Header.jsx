@@ -16,6 +16,7 @@ export default function Header() {
             try {
                 const response = await axios.get('http://localhost:8080/user', { withCredentials: true });
                 if (response.data.isLogged) {
+                    console.log('user data:', response.data);
                     setUserdata(response.data);
                 }
             } catch {
@@ -109,7 +110,7 @@ export default function Header() {
                     :
                     <AccountBtnsContainer>
                         <Btn onClick={() => { navigate(`/user/${userData.id}`); location.reload() }}>{userData.name}</Btn>
-                        <Img src="https://e7.pngegg.com/pngimages/416/62/png-clipart-anonymous-person-login-google-account-computer-icons-user-activity-miscellaneous-computer-thumbnail.png"></Img>
+                        <Img src={userData.imgAdress}></Img>
                     </AccountBtnsContainer>
                 }
 

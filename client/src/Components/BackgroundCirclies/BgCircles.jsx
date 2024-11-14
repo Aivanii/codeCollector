@@ -1,10 +1,9 @@
-import { Circle, Circle2 } from "./BgCirclesStyles";
+import { Circle } from "./BgCirclesStyles";
 
 export default function BgCircles() {
     return (
         <>
             <Circle/>
-            <Circle2/>
         </>
     );
 }

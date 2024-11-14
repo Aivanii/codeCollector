@@ -18,6 +18,14 @@ export const FooterContainer = styled.footer`
     align-content: flex-start;
     align-items: baseline;
     backdrop-filter: var(--standartBgBlur);
+    @media (max-width: 570px) 
+    {
+        flex-direction: column;
+        text-align: center;
+        align-items: stretch;
+        align-content: normal;
+        gap: 1rem;
+    }
 `;
 
 export const Span = styled.span`
@@ -45,5 +53,4 @@ export const Hr = styled.div`
 export const HorizontalHR = styled.div`
     width: 80%;
     margin: auto;
-
 `;

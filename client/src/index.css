@@ -39,6 +39,7 @@ main {
 
     --PLBtnsWidth: clamp(160px, 50vw, 1280px);
     --articleActiveWidth: clamp(160px, 80vw, 1280px);
+    --superLongDurationTime: 20s;
     --standartDurationTime: .2s;
     --longDurationTime: .75s;
     --linkUnactiveColor: #84a0ef;
@@ -70,6 +71,8 @@ main {
     --userContainerWidth: clamp(160px, 65vw, 1280px);
     --userLeftContainerWidth: 15rem;
     --DWSLogoSize: clamp(120px, 12vw, 20rem);
+
+    --standartPaddingSize: clamp(.1rem, 1vw, 1rem);
 }
 
 .Container {
