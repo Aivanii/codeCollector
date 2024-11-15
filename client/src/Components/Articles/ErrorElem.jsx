@@ -9,6 +9,7 @@ const Container = styled.div`
 const Span = styled.span`
     color: var(--unactiveFontColor);
     font-size: var(--bigFontSize);
+    text-align: center;
 `;
 const ContainerRelative = styled.div`
     position: relative;

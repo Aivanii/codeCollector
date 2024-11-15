@@ -1,0 +1,122 @@
+<title>Работа с Promise в JavaScript</title>
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi">
+                    <a class="TopLiLink" href="/home">Home</a>
+                </li>
+                <li class="TopLi">
+                    <a class="TopLiLink" href="/articles/Frontend_Development">Frontend Development</a>
+                </li>
+                <li class="TopLi">
+                    <a class="TopLiLink" href="/articles/Frontend_Development/JavaScript">JavaScript</a>
+                </li>
+            </ul>
+            <span class="DateSpan">20.10.2024</span>
+        </div>
+        <h1 class="TitleText">Работа с Promise в JavaScript</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">В этой статье мы рассмотрим, как использовать Promise в JavaScript для обработки асинхронных
+            операций.
+        </p>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+                <span class="SpanLine">10</span>
+                <span class="SpanLine">11</span>
+                <span class="SpanLine">12</span>
+            </div>
+            <pre class="CodeboxCode">
+const myPromise = new Promise((resolve, reject) => {
+    const success = true; // Симуляция успеха или ошибки
+    if (success) {
+        resolve('Операция успешна!');
+    } else {
+        reject('Произошла ошибка!');
+    }
+});
+
+myPromise
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+    </pre>
+        </div>
+        <h2 class="ThemeTitle">Что такое Promise?</h2>
+        <p class="Text">Promise — это объект, представляющий завершение или неудачу асинхронной операции. Он может
+            находиться в
+            одном из трех состояний: ожидание (pending), выполнено (fulfilled) или отклонено (rejected).</p>
+        <h2 class="ThemeTitle">Как использовать Promise?</h2>
+        <p class="Text">Для создания Promise используйте конструктор <code>Promise</code>, передавая ему функцию с двумя
+            параметрами: <code>resolve</code> и <code>reject</code>. Пример:</p>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+            </div>
+            <pre class="CodeboxCode">
+const myPromise = new Promise((resolve, reject) => {
+    // Асинхронная операция
+    setTimeout(() => {
+        resolve('Данные получены!');
+    }, 1000);
+});
+
+myPromise.then(data => console.log(data)); </pre>
+        </div>
+        <h2 class="ThemeTitle">Обработка ошибок</h2>
+        <p class="Text">Важно обрабатывать возможные ошибки при работе с Promise. Используйте метод <code>catch</code>
+            для
+            обработки отклоненных Promise:</p>
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+                <span class="SpanLine">10</span>
+                <span class="SpanLine">11</span>
+            </div>
+            <pre class="CodeboxCode">
+const myPromise = new Promise((resolve, reject) => {
+    const success = false; // Симуляция ошибки if (success) {
+        resolve('Операция успешна!');
+    } else {
+        reject('Произошла ошибка!');
+    }
+});
+
+myPromise
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+    </pre>
+        </div>
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">Promise — это мощный инструмент для работы с асинхронными операциями в JavaScript. Он позволяет
+            легко
+            управлять результатами и ошибками, делая код более читаемым и поддерживаемым. Используйте Promise для
+            обработки
+            асинхронных операций и не забывайте обрабатывать возможные ошибки.</p>
+    </article>
+</main>

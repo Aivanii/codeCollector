@@ -6,7 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="ebed14b5-beab-44f8-94fa-0de516993cb7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Fetch.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Micro_&amp;_Macro_tasks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Promise.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/Articles/Frontend Development/JavaScript/Работа_с_Fetch_в_JavaScript.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Articles/ErrorElem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Articles/ErrorElem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/BackgroundCirclies/BgCircles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/BackgroundCirclies/BgCircles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/BackgroundCirclies/BgCirclesStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/BackgroundCirclies/BgCirclesStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Employees/EmployesComponents.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Employees/EmployesComponents.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/FindBar/Find.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/FindBar/Find.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/FindBar/FindStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/FindBar/FindStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Footer/FooterStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Footer/FooterStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Header/HeaderStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Header/HeaderStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/OneFilterPage/OneFilterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/OneFilterPage/OneFilterPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/PLBtns/PLBtns.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/PLBtns/PLBtns.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/SearchPage/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/SearchPage/Search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/TwoFiltersPage/TwoFiltersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/TwoFiltersPage/TwoFiltersPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/User/UserStyles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/User/UserStyles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/error-page-404.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/error-page-404.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/MainUser/MainUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/MainUser/MainUser.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

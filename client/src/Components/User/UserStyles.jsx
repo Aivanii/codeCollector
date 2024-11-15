@@ -3,16 +3,17 @@ import styled from "styled-components";
 export const Main = styled.main`
     border: var(--standartBorder);
     width: var(--userContainerWidth);
-    padding: 1rem;
+    padding: var(--standartPaddingSize);
     margin: auto;
     border-radius: .2rem;
-    gap: 1rem;
+    gap: var(--standartPaddingSize);
     display: flex;
     flex-direction: row;
     align-content: center;
     align-items: center;
     justify-content: space-around;
     align-items: stretch;
+    margin-bottom: 1rem;
     @media (max-width: 720px) {
         flex-direction: column;; /* Изменяем отступы для горизонтального расположения */
     }

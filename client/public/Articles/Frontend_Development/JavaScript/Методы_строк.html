@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+<div class="TopContainer">
+    <div class="FlexContainer">
+        <ul class="TopUl">
+            <li class="TopLi">
+                <a class="TopLiLink" href="/home">Home</a>
+            </li>
+            <li class="TopLi">
+                <a class="TopLiLink" href="/articles/Frontend_Development">Frontend Development</a>
+            </li>
+            <li class="TopLi">
+                <a class="TopLiLink" href="/articles/Frontend_Development/JavaScript">JavaScript</a>
+            </li>
+        </ul>
+        <span class="DateSpan">12.11.2024</span>
+    </div>
+    <h1 class="TitleText">Методы строк в JavaScript</h1>
+</div>
+<article class="ArticleContainer">
+<p class="Text">В JavaScript строки являются одним из основных типов данных, и они предоставляют множество методов для работы с текстом. В этой статье мы рассмотрим основные методы строк, которые помогут вам эффективно манипулировать текстовыми данными.</p>
+
+<div class="CodeContainer">
+    <div class="SpanCodeboxLine">
+        <span class="SpanLine">1</span>
+        <span class="SpanLine">2</span>
+        <span class="SpanLine">3</span>
+        <span class="SpanLine">4</span>
+        <span class="SpanLine">5</span>
+        <span class="SpanLine">6</span>
+    </div>
+    <pre class="CodeboxCode">
+const str = "Hello, World!";
+console.log(str.length); // 13
+console.log(str.toUpperCase()); // "HELLO, WORLD!"
+console.log(str.substring(0, 5)); // "Hello"
+console.log(str.replace("World", "JavaScript")); // "Hello, JavaScript!"
+console.log(str.split(", ")); // ["Hello", "World!"]
+    </pre>
+</div>
+
+<h2 class="ThemeTitle">Основные методы строк</h2>
+<p class="Text">JavaScript предлагает множество методов для работы со строками. Рассмотрим некоторые из них:</p>
+<ul class="Text">
+    <li><code class="CodeText">length</code> — возвращает длину строки.</li>
+    <li><code class="CodeText">toUpperCase()</code> — преобразует строку в верхний регистр.</li>
+    <li><code class="CodeText">substring(start, end)</code> — извлекает подстроку из строки.</li>
+    <li><code class="CodeText">replace(searchValue, newValue)</code> — заменяет часть строки на другую строку.</li>
+    <li><code class="CodeText">split(separator)</code> — разделяет строку на массив подстрок.</li>
+</ul>
+
+<h2 class="ThemeTitle">Дополнительные методы</h2>
+<p class="Text">Помимо основных методов, существуют и другие полезные методы для работы со строками:</p>
+<ul class="Text">
+    <li><code class="CodeText">trim()</code> — удаляет пробелы в начале и конце строки.</li>
+    <li><code class="CodeText">charAt(index)</code> — возвращает символ по указанному индексу.</li>
+    <li><code class="CodeText">indexOf(searchValue)</code> — возвращает индекс первого вхождения подстроки.</li>
+    <li><code class="CodeText">includes(searchValue)</code> — проверяет, содержит ли строка указанную подстроку.</li>
+</ul>
+
+<h2 class="ThemeTitle">Пример использования</h2>
+<div class="CodeContainer">
+    <div class="SpanCodeboxLine">
+        <span class="SpanLine">1</span>
+        <span class="SpanLine">2</span>
+        <span class="SpanLine">3</span>
+        <span class="SpanLine">4</span>
+    </div>
+    <pre class="CodeboxCode">
+const text = "  JavaScript is awesome!  ";
+console.log(text.trim()); // "JavaScript is awesome!"
+console.log(text.indexOf("is")); // 11
+console.log(text.includes("awesome")); // true
+    </pre>
+</div>
+
+<p class="Text">В этом примере мы используем методы <code class="CodeText">trim()</code>, <code class="CodeText">indexOf()</code> и <code class="CodeText">includes()</code> для работы со строкой.</p>
+
+<p class="Text">Методы строк в JavaScript делают работу с текстом простой и эффективной. Понимание этих методов поможет вам лучше манипулировать строками и обрабатывать текстовые данные в ваших приложениях.</p>
+</article>
+</main>

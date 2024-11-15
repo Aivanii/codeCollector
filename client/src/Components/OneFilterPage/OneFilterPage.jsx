@@ -13,7 +13,7 @@ export default function OneFilterPage() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/articles/${url[2]}`, {withCredentials: true});
+                const response = await axios.get(`http://localhost:8080/articles/${url[2]}`, { withCredentials: true });
                 setData(response.data.users[0]);
             } catch {
                 setError('Ошибка при загрузке данных');
@@ -25,48 +25,50 @@ export default function OneFilterPage() {
     }, []);
     return (
         <>
-            <div className="TopContainer">
-                <div className="FlexContainer">
-                    <ul className="TopUl">
-                        <li className="TopLi">
-                            <a className="TopLiLink" href="/home">Home</a>
-                        </li>
-                        <li className="TopLi">
-                            <a className="TopLiLink" href={"/articles/" + url[2]}>{url[2].replace(/_/g, " ")}</a>
-                        </li>
-                    </ul>
+            <main>
+                <div className="TopContainer">
+                    <div className="FlexContainer">
+                        <ul className="TopUl">
+                            <li className="TopLi">
+                                <a className="TopLiLink" href="/home">Home</a>
+                            </li>
+                            <li className="TopLi">
+                                <a className="TopLiLink" href={"/articles/" + url[2]}>{url[2].replace(/_/g, " ")}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <br></br>
-            {error ? (
-                <ErrorElem />
-            ) : loading ?
-                <LoadingElem />
-                : (
-                    <>
-                        <Container>
-                            {
-                                (data.length > 0)
-                                    ?
-                                    (data.map((elem, index) => {
-                                        return <Link key={index} href={`/articles/${url[2]}/` + elem}>{elem.replace(/_/g, " ")}</Link>
-                                    }))
-                                    :
-                                    <>
-                                        <br></br>
-                                        <Span>
-                                            Статей по выбранной технологии на данный момент нет.
-                                            Приносим свои искренние извинения. Нам очень важно благополучие
-                                            наших пользователей, так что мы в скорейшем времени
-                                            приложим все возможные усилия для устранения этих неполадок!
-                                        </Span>
-                                    </>
-                            }
-                        </Container>
-                        <Footer />
-                    </>
-                )}
+                {error ? (
+                    <ErrorElem />
+                ) : loading ?
+                    <LoadingElem />
+                    : (
+                        <>
+                            <Container style={{ marginTop: "1rem" }}>
+                                {
+                                    (data.length > 0)
+                                        ?
+                                        (data.map((elem, index) => {
+                                            return <Link key={index} href={`/articles/${url[2]}/` + elem}>{elem.replace(/_/g, " ")}</Link>
+                                        }))
+                                        :
+                                        <>
+                                            <br></br>
+                                            <Span>
+                                                Статей по выбранной технологии на данный момент нет.
+                                                Приносим свои искренние извинения. Нам очень важно благополучие
+                                                наших пользователей, так что мы в скорейшем времени
+                                                приложим все возможные усилия для устранения этих неполадок!
+                                            </Span>
+                                        </>
+                                }
+                            </Container>
 
+                        </>
+                    )}
+
+            </main>
+            <Footer />
         </>
     );
 }

@@ -5,17 +5,27 @@ export const Container = styled.div`
     flex-direction: column;
 `;
 export const FooterContainer = styled.footer`
-    width: 100vw;
-    position: fixed;
     bottom: 0;
-    margin-top: 5rem;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: space-around;
     border-top: var(--FooterBorderColor);
     align-content: flex-start;
     align-items: baseline;
     backdrop-filter: var(--standartBgBlur);
+    align-content: flex-start;
+    align-items: baseline;
+    backdrop-filter: var(--standartBgBlur);
+    @media (max-width: 570px) 
+    {
+        flex-direction: column;
+        text-align: center;
+        align-items: stretch;
+        align-content: normal;
+        gap: 1rem;
+    }
 `;
 
 export const Span = styled.span`
@@ -43,5 +53,4 @@ export const Hr = styled.div`
 export const HorizontalHR = styled.div`
     width: 80%;
     margin: auto;
-
 `;

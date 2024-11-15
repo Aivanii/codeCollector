@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi">
+                    <a class="TopLiLink" href="/home">Home</a>
+                </li>
+                <li class="TopLi">
+                    <a class="TopLiLink" href="/articles/Frontend_Development">Frontend Development</a>
+                </li>
+                <li class="TopLi">
+                    <a class="TopLiLink" href="/articles/Frontend_Development/JavaScript">JavaScript</a>
+                </li>
+            </ul>
+            <span class="DateSpan">12.11.2024</span>
+        </div>
+        <h1 class="TitleText">Способы объявления переменных в JavaScript</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">В JavaScript существует несколько способов объявления переменных, каждый из которых имеет свои
+            особенности и области применения. В этой статье мы рассмотрим три основных способа: <code
+                class="CodeText">var</code>, <code class="CodeText">let</code> и <code class="CodeText">const</code>.
+        </p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+            </div>
+            <pre class="CodeboxCode">
+var name = "John"; // Объявление переменной с помощью var
+let age = 30;      // Объявление переменной с помощью let
+const pi = 3.14;   // Объявление константы с помощью const
+name = "Jane";     // Изменение значения переменной
+</pre>
+        </div>
+
+        <h2 class="ThemeTitle">1. Объявление с помощью <code class="CodeText">var</code></h2>
+        <p class="Text">Ключевое слово <code class="CodeText">var</code> используется для объявления переменных с
+            функциональной
+            областью видимости. Это означает, что переменные, объявленные с помощью <code class="CodeText">var</code>,
+            доступны
+            в пределах функции, в которой они были объявлены. Если <code class="CodeText">var</code> используется вне
+            функции,
+            переменная становится глобальной.</p>
+
+        <h2 class="ThemeTitle">2. Объявление с помощью <code class="CodeText">let</code></h2>
+        <p class="Text">Ключевое слово <code class="CodeText">let</code> было введено в ES6 и позволяет объявлять
+            переменные с
+            блочной областью видимости. Это означает, что переменные, объявленные с помощью <code
+                class="CodeText">let</code>,
+            доступны только внутри блока кода, в котором они были объявлены.</p>
+
+        <h2 class="ThemeTitle">3. Объявление с помощью <code class="CodeText">const</code></h2>
+        <p class="Text">Ключевое слово <code class="CodeText">const</code> также было введено в ES6 и используется для
+            объявления констант, значение которых не может быть изменено после инициализации. Подобно <code
+                class="CodeText">let</code>, <code class="CodeText">const</code> имеет блочную область видимости.</p>
+
+        <p class="Text">Каждый из этих способов объявления переменных имеет свои преимущества и недостатки, и выбор
+            подходящего
+            способа зависит от конкретной задачи и требований к коду.</p>
+    </article>
+</main>

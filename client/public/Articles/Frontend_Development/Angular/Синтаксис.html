@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Frontend_Development">Frontend Development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Frontend_Development/Angular">Angular</a> </li>
+            </ul> <span class="DateSpan">12.11.2024</span>
+        </div>
+        <h1 class="TitleText">Синтаксис Angular</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">Angular — это мощный фреймворк для создания веб-приложений, разработанный Google. В этой статье мы рассмотрим основные аспекты синтаксиса Angular, включая шаблоны, директивы и компоненты.</p>
+        
+        <h2 class="ThemeTitle">Шаблоны Angular</h2>
+        <p class="Text">Шаблоны Angular основаны на HTML и позволяют вам писать разметку, которая связывается с данными с помощью привязки данных. Привязка данных может быть однонаправленной и двунаправленной.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+            </div>
+            <pre class="CodeboxCode">
+&lt;div&gt; 
+    &lt;h1&gt;{{ title }}&lt;/h1&gt; 
+    &lt;button (click)="changeTitle()"&gt;Изменить заголовок&lt;/button&gt; 
+&lt;/div&gt; </pre>
+        </div>
+        <p class="Text">В этом примере мы используем двойные фигурные скобки для отображения значения переменной <code class="CodeText">title</code>, а также событие <code class="CodeText">(click)</code> для обработки клика.</p>
+
+        <h2 class="ThemeTitle">Директивы Angular</h2>
+        <p class="Text">Директивы — это специальные атрибуты, которые добавляют функциональность к элементам. Например, директива <code class="CodeText">*ngIf</code> позволяет условно отображать элементы:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+            </div>
+            <pre class="CodeboxCode">
+&lt;div *ngIf="isVisible"&gt;Это видимый элемент&lt;/div&gt; </pre>
+        </div>
+        <p class="Text">В этом примере элемент будет отображаться только если переменная <code class="CodeText">isVisible</code> истинна.</p>
+
+        <h2 class="ThemeTitle">Компоненты Angular</h2>
+        <p class="Text">Компоненты — это переиспользуемые экземпляры Angular, которые могут иметь собственные данные и методы. Вот пример простого компонента:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+            </div>
+            <pre class="CodeboxCode">
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'greeting',
+    template: '&lt;h1&gt;{{ message }}&lt;/h1&gt;'
+})
+export class GreetingComponent {
+    message: string = 'Привет, мир!';
+} </pre>
+        </div>
+
+        <p class="Text">Теперь вы можете использовать компонент <code class="CodeText">&lt;greeting&gt;</code> в вашем приложении.</p>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">Angular предлагает мощный и интуитивно понятный синтаксис для разработки веб-приложений. Понимание основ шаблонов, директив и компонентов поможет вам создавать эффективные и динамичные интерфейсы.</p>
+    </article>
+</main>

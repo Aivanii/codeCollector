@@ -18,7 +18,7 @@ export const FindBar = styled.input`
     };
 `;
 
-export const FindBarContainer = styled.form`
+export const FindBarContainer = styled.div`
     position: absolute;
     display: flex;
     left: 0;

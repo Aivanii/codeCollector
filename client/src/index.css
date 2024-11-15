@@ -19,7 +19,19 @@ body {
     position: relative;
     font-family: "Kabrio", "Arial", sans-serif;
     color: var(--unactiveFontColor);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+main {
+    display: grid;
+    grid-template-rows: 0fr auto;
+    min-height: 80vh;
+    margin-bottom: 1rem;
+}
+
 
 :root {
     --codeFontColor: #b5b5b5;
@@ -27,6 +39,7 @@ body {
 
     --PLBtnsWidth: clamp(160px, 50vw, 1280px);
     --articleActiveWidth: clamp(160px, 80vw, 1280px);
+    --superLongDurationTime: 20s;
     --standartDurationTime: .2s;
     --longDurationTime: .75s;
     --linkUnactiveColor: #84a0ef;
@@ -58,6 +71,8 @@ body {
     --userContainerWidth: clamp(160px, 65vw, 1280px);
     --userLeftContainerWidth: 15rem;
     --DWSLogoSize: clamp(120px, 12vw, 20rem);
+
+    --standartPaddingSize: clamp(.1rem, 1vw, 1rem);
 }
 
 .Container {
@@ -127,6 +142,9 @@ code {
     font-size: var(--smallFontSize);
     line-height: 1.416;
 }
+.Text li {
+    margin-left: 2rem;
+}
 
 pre {
     line-height: 1.2;
@@ -150,8 +168,11 @@ pre {
 .TopContainer {
     margin: auto;
     width: var(--articleActiveWidth);
+    margin-top: 0;
 }
-
+.ArticleContainer{
+    margin-top: 0;
+}
 .FlexContainer {
     display: flex;
     flex-direction: row;
@@ -192,6 +213,7 @@ pre {
     color: var(--unactiveFontColor);
     font-size: var(--smallFontSize);
 }
-a:hover{
-    text-decoration: underline; 
+
+a:hover {
+    text-decoration: underline;
 }

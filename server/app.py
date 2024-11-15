@@ -31,15 +31,15 @@ conn = create_connection_db(db_config["mysql"]["host"],
                             db_config["mysql"]["pass"],
                             db_config["mysql"]["database"])
 cursor = conn.cursor()
-def url():
-    pul = __file__.split('\\')
-    urls = []
-    for x in pul:
-        if x != 'server':
-            urls.append(x)
-        else:
-            break
-    return '/'.join(urls) + '/'
+
+pul = __file__.split('\\')
+urls = []
+for x in pul:
+    if x != 'server':
+        urls.append(x)
+    else:
+        break
+url = '/'.join(urls) + '/'
 def protect(str1, str2):
     i = 0
     for char1, char2 in zip(str1, str2):
@@ -51,9 +51,11 @@ def protect(str1, str2):
         return False
 @app.route('/articles/<filter1>/<filter2>/<article>', methods = ['GET'])
 def statis(filter1,filter2,article):
-    with open(url() +'client/public/Articles/'+filter1+'/'+filter2+ '/' + article.replace(" ", "_") + '.html', 'r', encoding='utf-8') as file:
-        data = file.read()
-
+    try:
+        with open(url +'client/public/Articles/'+filter1+'/'+filter2+ '/' + article.replace(" ", "_") + '.html', 'r', encoding='utf-8') as file:
+            data = file.read()
+    except FileNotFoundError:
+        data = []
     return jsonify(
         {
             "users": [
@@ -63,7 +65,10 @@ def statis(filter1,filter2,article):
     )
 @app.route('/articles/<filter1>/<filter2>', methods = ['GET'])
 def twofilir(filter1,filter2):
-    files = os.listdir(url() +'client/public/Articles/' +filter1+'/'+filter2)
+    try:
+        files = os.listdir(url +'client/public/Articles/' +filter1+'/'+filter2)
+    except FileNotFoundError:
+        files = []
     files = [id[:-5] for id in files]
     return jsonify(
         {
@@ -74,7 +79,10 @@ def twofilir(filter1,filter2):
     )
 @app.route('/articles/<filter1>', methods = ['GET'])
 def filtr(filter1):
-    files = os.listdir(url() +'client/public/Articles/' +filter1)
+    try:
+        files = os.listdir(url +'client/public/Articles/' +filter1)
+    except FileNotFoundError:
+        files = []
     return jsonify(
         {
             "users": [
@@ -124,7 +132,7 @@ def user():
                 'name': query_result[1],
                 'email': query_result[2],
                 'pass': query_result[3],
-                'imgAdress': 'https://www.google.com/imgres?q=%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%20%D0%B0%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D1%83%D1%81%D0%B0&imgurl=https%3A%2F%2Fvinyl-market.ru%2Fimages%2Fshop_items%2F63.jpg.webp&imgrefurl=https%3A%2F%2Fvinyl-market.ru%2F63i&docid=rpoo7WxTP2HURM&tbnid=c-_Z615ozMQ5qM&vet=12ahUKEwjK0aP-laeJAxWO9LsIHTT5IJMQM3oECHgQAA..i&w=1655&h=1655&hcb=2&ved=2ahUKEwjK0aP-laeJAxWO9LsIHTT5IJMQM3oECHgQAA',
+                'imgAdress': 'https://images.hdqwalls.com/download/anonymus-cyber-guy-p3-1336x768.jpg',
                 'isLogged': True
             }
         )
@@ -232,19 +240,33 @@ def send_history():
 def search(quest):
     quest = re.split('[,;:.\n?!@#$%^&*() ]+', quest)
     result = []
-    s = url() + 'client/public/Articles/'
+    s = url + 'client/public/Articles/'
     files = os.listdir(s)
-
+    filtir1 = list()
     def add_to_results(path, title):
         """Добавляет элемент в результат, если он уникален."""
         href = '..' + s.split('public')[1] + path
         if not any(item['title'] == title and item['href'] == href for item in result):
             result.append({'title': title, 'href': href})
+    def add_filtir1(mas, filtir1):
+        if len(filtir1) == 0 or not mas[0] in filtir1:
+            filtir1.append(mas[0])
+            if len(mas) == 2 and (len(filtir1) == 2 and not mas[1] in filtir1 or len(filtir1) == 1 and mas[0] in filtir1):
+                filtir1.append(mas[1])
+        elif len(mas) == 2 and mas[0] in filtir1 and not mas[1] in filtir1 and len(filtir1) != 2 and not isinstance(filtir1, str):
+            filtir1.append(mas[1])
+        elif len(mas) == 1 and mas[0] in filtir1 and len(filtir1) == 2 and not isinstance(filtir1, str):
+            pass
+        else:
+            filtir1 = str(filtir1)
+
+        return filtir1
     for qur in quest:
         qur = translit(qur, language_code='ru', reversed=True)
         for x in files:
             res = protect(x, qur)
             if res:
+                filtir1 = add_filtir1([res], filtir1)
                 fil1 = os.listdir(s + res)
                 for y in fil1:
                     fil2 = os.listdir(s + res + '/' + y)
@@ -255,6 +277,7 @@ def search(quest):
             for y in fil2:
                 res = protect(y, qur)
                 if res:
+                    filtir1 = add_filtir1([x,res], filtir1)
                     product = os.listdir(s + x + '/' + res)
                     for z in product:
                         add_to_results(f"{x}/{res}/{z}", z[:-5])
@@ -263,7 +286,12 @@ def search(quest):
                 for z in prod:
                     res = protect(z[:-5], qur)
                     if res:
+                        filtir1 = add_filtir1([x,y], filtir1)
                         add_to_results(f"{x}/{y}/{res}.html", z[:-5])
+    if isinstance(filtir1, str):
+        result.insert(0,[])
+    else:
+        result.insert(0,list(filtir1))
     return jsonify(result)
 
 @app.route('/database', methods = ['GET'])

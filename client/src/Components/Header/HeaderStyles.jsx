@@ -80,11 +80,11 @@ export const ListContainer = styled.ul`
         flex-direction: column;
         position: fixed;
         left: -50%;
-        width: 100%;
+        width: 101vw;
         top: 0;
         padding: 2rem;
         gap: 1rem;
-        height: 100%;
+        height: 101vh;
         z-index: 1000;
         justify-content: flex-start;
         align-items: flex-start;

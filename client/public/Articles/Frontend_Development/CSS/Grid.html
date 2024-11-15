@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Frontend_Development">Frontend Development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Frontend_Development/CSS_Grid">CSS</a> </li>
+            </ul> <span class="DateSpan">12.11.2024</span>
+        </div>
+        <h1 class="TitleText">CSS Grid</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">CSS Grid Layout — это мощный инструмент для создания сложных макетов веб-страниц. Он позволяет легко организовывать элементы на странице в виде сетки, предоставляя гибкость и контроль над расположением контента.</p>
+        
+        <h2 class="ThemeTitle">Что такое CSS Grid?</h2>
+        <p class="Text">CSS Grid — это двухмерная система компоновки, которая позволяет создавать макеты как по строкам, так и по колонкам. Это делает его идеальным для создания сложных интерфейсов, где требуется точное позиционирование элементов.</p>
+
+        <h2 class="ThemeTitle">Основные концепции CSS Grid</h2>
+        <p class="Text">Вот несколько ключевых понятий, которые необходимо знать при работе с CSS Grid:</p>
+        
+        <ul class="Text">
+            <li><strong>Grid Container:</strong> Элемент, к которому применяется свойство <code class="CodeText">display: grid;</code>.</li>
+            <li><strong>Grid Items:</strong> Элементы внутри контейнера сетки.</li>
+            <li><strong>Grid Lines:</strong> Воображаемые линии, которые разделяют строки и колонки.</li>
+            <li><strong>Grid Cells:</strong> Пересечения строк и колонок, которые образуют ячейки сетки.</li>
+            <li><strong>Grid Areas:</strong> Прямоугольные области, определенные для размещения элементов.</li>
+        </ul>
+
+        <h2 class="ThemeTitle">Пример использования CSS Grid</h2>
+        <p class="Text">Вот пример базовой реализации CSS Grid:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+                <span class="SpanLine">10</span>
+                <span class="SpanLine">11</span>
+                <span class="SpanLine">12</span>
+                <span class="SpanLine">13</span>
+                <span class="SpanLine">14</span>
+                <span class="SpanLine">15</span>
+                <span class="SpanLine">16</span>
+                <span class="SpanLine">17</span>
+                <span class="SpanLine">18</span>
+                <span class="SpanLine">19</span>
+                <span class="SpanLine">20</span>
+                <span class="SpanLine">21</span>
+                <span class="SpanLine">22</span>
+                <span class="SpanLine">23</span>
+                <span class="SpanLine">24</span>
+                <span class="SpanLine">25</span>
+                <span class="SpanLine">26</span>
+                <span class="SpanLine">27</span>
+                <span class="SpanLine">28</span>
+                <span class="SpanLine">29</span>
+                <span class="SpanLine">30</span>
+            </div>
+            <pre class="CodeboxCode">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Пример CSS Grid&lt;/title&gt;
+    &lt;style&gt;
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+        .grid-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid-container"&gt;
+        &lt;div class="grid-item"&gt;Элемент 1&lt;/div&gt;
+        &lt;div class="grid-item"&gt;Элемент 2&lt;/div&gt;
+        &lt;div class="grid-item"&gt;Элемент 3&lt;/div&gt;
+        &lt;div class="grid-item"&gt;Элемент 4&lt;/div&gt;
+        &lt;div class="grid-item"&gt;Элемент 5&lt;/div&gt;
+        &lt;div class="grid-item"&gt;Элемент 6&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt; </pre>
+        </div>
+        <p class="Text">В этом примере мы создаем контейнер сетки с тремя колонками и элементами, которые автоматически располагаются в сетке.</p>
+
+        <h2 class="ThemeTitle">Преимущества CSS Grid</h2>
+        <p class="Text">Использование CSS Grid имеет множество преимуществ:</p>
+        <ul class="Text">
+            <li>Гибкость в создании сложных макетов.</li>
+            <li>Упрощение работы с адаптивной версткой.</li>
+            <li>Легкость в управлении пространством между элементами.</li>
+            <li>Поддержка двухмерной компоновки (строки и колонки).</li>
+        </ul>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">CSS Grid — это мощный инструмент для веб-разработчиков, позволяющий создавать сложные и адаптивные макеты. Понимание основ CSS Grid поможет вам улучшить качество ваших веб-приложений и сделать их более удобными для пользователей.</p>
+    </article>
+</main>
