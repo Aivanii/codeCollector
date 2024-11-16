@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development">Backend development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development/Rust">Rust</a> </li>
+            </ul> <span class="DateSpan">16.11.2024</span>
+        </div>
+        <h1 class="TitleText">Синтаксис Rust</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">Rust — это системный язык программирования, который акцентирует внимание на безопасности памяти, производительности и параллелизме. Он идеально подходит для разработки высокопроизводительных приложений и системного программного обеспечения. В этой статье мы рассмотрим основные аспекты синтаксиса Rust, включая переменные, функции, структуры и управление потоком.</p>
+        
+        <h2 class="ThemeTitle">Основы синтаксиса Rust</h2>
+        <p class="Text">Программа на Rust начинается с объявления функции <code class="CodeText">main</code>, которая является точкой входа в программу.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+            </div>
+            <pre class="CodeboxCode">
+fn main() {
+    println!("Привет, мир!");
+} </pre>
+        </div>
+        <p class="Text">В этом примере мы создаем простую программу, которая выводит "Привет, мир!" на экран с помощью функции <code class="CodeText">println!</code>.</p>
+
+        <h2 class="ThemeTitle">Переменные</h2>
+        <p class="Text">Переменные в Rust по умолчанию являются неизменяемыми. Чтобы объявить изменяемую переменную, используйте ключевое слово <code class="CodeText">mut</code>.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+            </div>
+            <pre class="CodeboxCode">
+let name = "Alice"; // неизменяемая переменная
+let mut age = 30; // изменяемая переменная
+age += 1;
+
+println!("Имя: {}, Возраст: {}", name, age); </pre>
+        </div>
+
+        <p class="Text">В этом примере мы объявляем неизменяемую переменную <code class="CodeText">name</code> и изменяемую переменную <code class="CodeText">age</code>.</p>
+
+        <h2 class="ThemeTitle">Функции</h2>
+        <p class="Text">Функции в Rust определяются с помощью ключевого слова <code class="CodeText">fn</code>. Функции могут принимать параметры и возвращать значения.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+            </div>
+            <pre class="CodeboxCode">
+fn greet(name: &str) -> String {
+    format!("Привет, {}!", name)
+}
+
+println!("{}", greet("Alice")); </pre>
+        </div>
+
+        <p class="Text">В этом примере мы определяем функцию <code class="CodeText">greet</code>, которая принимает имя и возвращает приветственное сообщение.</p>
+
+        <h2 class="ThemeTitle">Структуры</h2>
+        <p class="Text">Структуры в Rust позволяют группировать данные. Они объявляются с помощью ключевого слова <code class="CodeText">struct</code>.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+            </div>
+            <pre class="CodeboxCode">
+struct Person {
+    name: String,
+    age: u32,
+}
+
+let alice = Person { name: String::from("Alice"), age: 30 };
+println!("Имя: {}, Возраст: {}", alice.name, alice.age); </pre>
+        </div>
+
+        <p class="Text">В этом примере мы создаем структуру <code class="CodeText">Person</code> и создаем экземпляр этой структуры.</p>
+
+        <h2 class="ThemeTitle">Управляющие структуры</h2>
+        <p class="Text">Rust поддерживает различные конструкции управления, такие как условные операторы и циклы. Вот пример условного оператора:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+            </div>
+            <pre class="CodeboxCode">
+let age = 20;
+
+if age >= 18 {
+    println!("Взрослый");
+} else {
+    println!("Несовершеннолетний");
+} </pre>
+        </div>
+
+        <p class="Text">В этом примере мы проверяем, является ли человек взрослым, и выводим соответствующее сообщение.</p>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">Rust — это мощный язык программирования, который предлагает безопасность и производительность. Понимание основ синтаксиса, включая переменные, функции, структуры и управление потоком, поможет вам начать программировать на Rust.</p>
+    </article>
+</main>

@@ -39,6 +39,7 @@ main {
 
     --PLBtnsWidth: clamp(160px, 50vw, 1280px);
     --articleActiveWidth: clamp(160px, 80vw, 1280px);
+    --avatarImg: clamp(2rem, 4vw, 3rem);
     --superLongDurationTime: 20s;
     --standartDurationTime: .2s;
     --longDurationTime: .75s;

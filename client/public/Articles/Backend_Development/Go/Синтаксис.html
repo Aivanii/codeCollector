@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development">Backend development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development/Go">Go</a> </li>
+            </ul> <span class="DateSpan">16.11.2024</span>
+        </div>
+        <h1 class="TitleText">Синтаксис Go</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">Go (или Golang) — это язык программирования, разработанный Google, который фокусируется на простоте, эффективности и производительности. Он идеально подходит для создания серверных приложений, микросервисов и распределенных систем. В этой статье мы рассмотрим основные аспекты синтаксиса Go, включая переменные, функции, структуры и управление потоком.</p>
+        
+        <h2 class="ThemeTitle">Основы синтаксиса Go</h2>
+        <p class="Text">Программа на Go начинается с пакета <code class="CodeText">package</code>, за которым следуют импортируемые библиотеки и функция <code class="CodeText">main</code>, которая является точкой входа в программу.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+            </div>
+            <pre class="CodeboxCode">
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Привет, мир!")
+} </pre>
+        </div>
+        <p class="Text">В этом примере мы создаем простую программу, которая выводит "Привет, мир!" на экран с помощью функции <code class="CodeText">fmt.Println</code>.</p>
+
+        <h2 class="ThemeTitle">Переменные</h2>
+        <p class="Text">Переменные в Go объявляются с помощью ключевого слова <code class="CodeText">var</code> или с помощью короткой записи <code class="CodeText">:=</code>. Переменные могут иметь явный тип или могут быть выведены автоматически.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+            </div>
+            <pre class="CodeboxCode">
+var name string = "Alice"
+age := 30
+
+fmt.Println("Имя:", name, "Возраст:", age) </pre>
+        </div>
+
+        <p class="Text">В этом примере мы объявляем переменную <code class="CodeText">name</code> с явным типом и переменную <code class="CodeText">age</code> с помощью короткой записи.</p>
+
+        <h2 class="ThemeTitle">Функции</h2>
+        <p class="Text">Функции в Go определяются с помощью ключевого слова <code class="CodeText">func</code>. Функции могут принимать параметры и возвращать значения.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+            </div>
+            <pre class="CodeboxCode">
+func greet(name string) string {
+    return "Привет, " + name + "!"
+}
+
+fmt.Println(greet("Alice")) </pre>
+        </div>
+
+        <p class="Text">В этом примере мы определяем функцию <code class="CodeText">greet</code>, которая принимает имя и возвращает приветственное сообщение.</p>
+
+        <h2 class="ThemeTitle">Структуры</h2>
+        <p class="Text">Структуры в Go позволяют группировать данные. Они объявляются с помощью ключевого слова <code class="CodeText">type</code>.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+            </div>
+            <pre class="CodeboxCode">
+type Person struct {
+    Name string
+    Age  int
+}
+
+alice := Person{Name: "Alice", Age: 30}
+fmt.Println(alice) </pre>
+        </div>
+
+        <p class="Text">В этом примере мы создаем структуру <code class="CodeText">Person</code> и создаем экземпляр этой структуры.</p>
+
+        <h2 class="ThemeTitle">Управляющие структуры</h2>
+        <p class="Text">Go поддерживает различные конструкции управления, такие как условные операторы и циклы. Вот пример условного оператора:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+            </div>
+            <pre class="CodeboxCode">
+age := 20
+
+if age >= 18 {
+    fmt.Println("Взрослый")
+} else {
+    fmt.Println("Несовершеннолетний")
+} </pre>
+        </div>
+
+        <p class="Text">В этом примере мы проверяем, является ли человек взрослым, и выводим соответствующее сообщение.</p>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">Go — это мощный язык программирования, который предлагает простоту и производительность. Понимание основ синтаксиса, включая переменные, функции, структуры и управление потоком, поможет вам начать программировать на Go.</p>
+    </article>
+</main>

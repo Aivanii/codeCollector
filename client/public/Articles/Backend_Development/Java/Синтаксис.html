@@ -1,0 +1,107 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development">Backend development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development/Java">Java</a> </li>
+            </ul> <span class="DateSpan">15.11.2024</span>
+        </div>
+        <h1 class="TitleText">Синтаксис Java</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">Java — это высокоуровневый язык программирования, который широко используется для разработки приложений, от мобильных до серверных решений. В этой статье мы рассмотрим основные аспекты синтаксиса Java, включая переменные, операторы, методы и классы.</p>
+        
+        <h2 class="ThemeTitle">Переменные и типы данных</h2>
+        <p class="Text">В Java переменные должны быть объявлены с указанием типа данных. Java поддерживает несколько примитивных типов данных, таких как <code class="CodeText">int</code>, <code class="CodeText">double</code>, <code class="CodeText">char</code> и <code class="CodeText">boolean</code>.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+            </div>
+            <pre class="CodeboxCode">
+int age = 25;
+double height = 5.9;
+char initial = 'A'; </pre>
+        </div>
+        <p class="Text">В этом примере мы создали три переменные: <code class="CodeText">age</code>, <code class="CodeText">height</code> и <code class="CodeText">initial</code>.</p>
+
+        <h2 class="ThemeTitle">Операторы</h2>
+        <p class="Text">Java поддерживает различные операторы, включая арифметические, логические и сравнительные операторы. Например:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+            </div>
+            <pre class="CodeboxCode">
+int sum = 5 + 10;
+boolean isAdult = (age >= 18); </pre>
+        </div>
+        <p class="Text">В этом примере мы вычисляем сумму и проверяем, является ли человек совершеннолетним.</p>
+
+        <h2 class="ThemeTitle">Методы</h2>
+        <p class="Text">Методы в Java определяются с помощью ключевого слова <code class="CodeText">void</code> (если метод ничего не возвращает) или с указанием типа возвращаемого значения. Вот пример простого метода:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+            </div>
+            <pre class="CodeboxCode">
+public static String greet(String name) {
+    return "Привет, " + name + "!";
+}
+
+String message = greet("Alice"); </pre>
+        </div>
+
+        <p class="Text">Теперь вы можете вызвать метод <code class="CodeText">greet</code> с именем, и он вернет приветственное сообщение.</p>
+
+        <h2 class="ThemeTitle">Классы и объекты</h2>
+        <p class="Text">Java является объектно-ориентированным языком, что означает, что вы можете создавать классы и экземпляры (объекты) классов. Вот пример простого класса:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+                <span class="SpanLine">10</span>
+                <span class="SpanLine">11</span>
+                <span class="SpanLine">12</span>
+                <span class="SpanLine">13</span>
+            </div>
+            <pre class="CodeboxCode">
+class Dog {
+    String name;
+
+    Dog(String name) {
+        this.name = name;
+    }
+
+    void bark() {
+        System.out.println("Гав!");
+    }
+}
+
+Dog myDog = new Dog("Buddy"); </pre>
+        </div>
+
+        <p class="Text">Теперь вы можете создать объект <code class="CodeText">myDog</code> и вызвать его метод <code class="CodeText">bark</code>.</p>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">Java предлагает мощный и гибкий синтаксис, который делает его идеальным языком для разработки различных приложений. Понимание основ переменных, операторов, методов и классов поможет вам начать программировать на Java.</p>
+    </article>
+</main>

@@ -18,10 +18,11 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Img = styled.img`
-  height: 100%;
+  height: var(--avatarImg);
+  width: var(--avatarImg);
+  object-fit: cover;
   border-radius: 50%;
   cursor: pointer;
-
 `;
 
 export const ImgHolder = styled.a`

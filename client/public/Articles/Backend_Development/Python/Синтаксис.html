@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development">Backend development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development/Python">Python</a> </li>
+            </ul> <span class="DateSpan">16.11.2024</span>
+        </div>
+        <h1 class="TitleText">Синтаксис Python</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">Python — это высокоуровневый язык программирования, известный своей простотой и читаемостью. В этой статье мы рассмотрим основные аспекты синтаксиса Python, включая переменные, операторы, функции и классы.</p>
+        
+        <h2 class="ThemeTitle">Переменные и типы данных</h2>
+        <p class="Text">В Python переменные создаются автоматически при присваивании значения. Python поддерживает различные типы данных, такие как строки, целые числа, числа с плавающей запятой и списки.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+            </div>
+            <pre class="CodeboxCode">
+name = "Alice"
+age = 30
+height = 5.5 </pre>
+        </div>
+        <p class="Text">В этом примере мы создали три переменные: <code class="CodeText">name</code>, <code class="CodeText">age</code> и <code class="CodeText">height</code>.</p>
+
+        <h2 class="ThemeTitle">Операторы</h2>
+        <p class="Text">Python поддерживает различные операторы, включая арифметические, логические и сравнительные операторы. Например:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+            </div>
+            <pre class="CodeboxCode">
+result = (5 + 3) * 2
+is_greater = result > 10 </pre>
+        </div>
+        <p class="Text">В этом примере мы вычисляем результат арифметического выражения и проверяем, больше ли он 10.</p>
+
+        <h2 class="ThemeTitle">Функции</h2>
+        <p class="Text">Функции в Python определяются с помощью ключевого слова <code class="CodeText">def</code>. Вот пример простой функции:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+            </div>
+            <pre class="CodeboxCode">
+def greet(name):
+    return f"Привет, {name}!"
+
+message = greet("Alice") </pre>
+        </div>
+
+        <p class="Text">Теперь вы можете вызвать функцию <code class="CodeText">greet</code> с именем, и она вернет приветственное сообщение.</p>
+
+        <h2 class="ThemeTitle">Классы и объекты</h2>
+        <p class="Text">Python поддерживает объектно-ориентированное программирование. Вы можете создавать классы и экземпляры (объекты) классов. Вот пример простого класса:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+            </div>
+            <pre class="CodeboxCode">
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        return "Гав!"
+
+my_dog = Dog("Buddy") </pre>
+        </div>
+
+        <p class="Text">Теперь вы можете создать объект <code class="CodeText">my_dog</code> и вызвать его метод <code class="CodeText">bark</code>.</p>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">Python предлагает простой и интуитивно понятный синтаксис, который делает его идеальным языком для начинающих. Понимание основ переменных, операторов, функций и классов поможет вам начать программировать на Python.</p>
+    </article>
+</main>

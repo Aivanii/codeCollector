@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development">Backend development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development/PHP">PHP</a> </li>
+            </ul> <span class="DateSpan">16.11.2024</span>
+        </div>
+        <h1 class="TitleText">Синтаксис PHP</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">PHP (Hypertext Preprocessor) — это популярный язык программирования, особенно используемый для веб-разработки. Он позволяет создавать динамические веб-страницы и взаимодействовать с базами данных. В этой статье мы рассмотрим основные аспекты синтаксиса PHP, включая переменные, операторы, функции и управление потоком.</p>
+        
+        <h2 class="ThemeTitle">Основы синтаксиса PHP</h2>
+        <p class="Text">PHP-код начинается с открывающего тега <code class="CodeText">&lt;?php</code> и заканчивается закрывающим тегом <code class="CodeText">?&gt</code>. Код может быть встроен в HTML.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+            </div>
+            <pre class="CodeboxCode">
+&lt;?php
+echo "Привет, мир!";
+?&gt; </pre>
+        </div>
+        <p class="Text">В этом примере мы используем функцию <code class="CodeText">echo</code> для вывода строки "Привет, мир!" на экран.</p>
+
+        <h2 class="ThemeTitle">Переменные</h2>
+        <p class="Text">Переменные в PHP начинаются с символа доллара (<code class="CodeText">$</code>) и могут содержать буквы, цифры и символы подчеркивания. Переменные являются динамически типизированными, что означает, что их тип может изменяться в процессе выполнения.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+            </div>
+            <pre class="CodeboxCode">
+&lt;?php
+$name = "Alice";
+$age = 30;
+$height = 5.5;
+
+echo "Имя: $name, Возраст: $age, Рост: $height";
+?&gt; </pre>
+        </div>
+
+        <p class="Text">В этом примере мы объявили три переменные: <code class="CodeText">$name</code>, <code class="CodeText">$age</code> и <code class="CodeText">$height</code>, и выводим их значения.</p>
+
+        <h2 class="ThemeTitle">Операторы</h2>
+        <p class="Text">PHP поддерживает различные операторы, включая арифметические, логические и сравнительные операторы. Например:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+            </div>
+            <pre class="CodeboxCode">
+&lt;?php
+$result = (5 + 3) * 2;
+$is_greater = $result > 10;
+
+echo $is_greater ? "Больше 10" : "Меньше или равно 10";
+?&gt; </pre>
+        </div>
+        <p class="Text">В этом примере мы вычисляем результат арифметического выражения и используем тернарный оператор для вывода результата.</p>
+
+        <h2 class="ThemeTitle">Функции</h2>
+        <p class="Text">Функции в PHP могут быть определены с помощью ключевого слова <code class="CodeText">function</code>. Вот пример простой функции:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+            </div>
+            <pre class="CodeboxCode">
+&lt;?php
+function greet($name) {
+    return "Привет, $name!";
+}
+
+echo greet("Alice");
+?&gt; </pre>
+        </div>
+
+        <p class="Text">В этом примере мы определяем функцию <code class="CodeText">greet</code>, которая принимает имя и возвращает приветственное сообщение.</p>
+
+        <h2 class="ThemeTitle">Управляющие структуры</h2>
+        <p class="Text">PHP предлагает различные конструкции управления, такие как условные операторы и циклы. Вот пример условного оператора:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+            </div>
+            <pre class="CodeboxCode">
+&lt;?php
+$age = 20;
+
+if ($age >= 18) {
+    echo "Взрослый";
+} else {
+    echo "Несовершеннолетний";
+}
+?&gt; </pre>
+        </div>
+
+        <p class="Text">В этом примере мы проверяем, является ли человек взрослым, и выводим соответствующее сообщение.</p>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">PHP является мощным языком для веб-разработки, и его синтаксис позволяет легко создавать динамические веб-приложения. Понимание основ переменных, операторов, функций и структур управления поможет вам начать программировать на PHP.</p>
+    </article>
+</main>

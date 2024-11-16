@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development">Backend development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development/Fortran">Fortran</a> </li>
+            </ul> <span class="DateSpan">16.11.2024</span>
+        </div>
+        <h1 class="TitleText">Синтаксис Fortran</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">Fortran (Formula Translation) — это один из самых ранних языков программирования, разработанный для научных и инженерных расчетов. В этой статье мы рассмотрим основные аспекты синтаксиса Fortran, включая переменные, операторы, подпрограммы и структуры управления.</p>
+        
+        <h2 class="ThemeTitle">Переменные и типы данных</h2>
+        <p class="Text">В Fortran переменные объявляются с указанием их типа. Основные типы данных включают целые числа (INTEGER), числа с плавающей запятой (REAL), логические значения (LOGICAL) и символьные строки (CHARACTER).</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+            </div>
+            <pre class="CodeboxCode">
+PROGRAM Example
+    INTEGER :: age
+    REAL :: height
+    CHARACTER(len=20) :: name
+
+    name = "Alice"
+    age = 30
+    height = 5.5
+END PROGRAM Example </pre>
+        </div>
+        <p class="Text">В этом примере мы объявили три переменные: <code class="CodeText">name</code>, <code class="CodeText">age</code> и <code class="CodeText">height</code>.</p>
+
+        <h2 class="ThemeTitle">Операторы</h2>
+        <p class="Text">Fortran поддерживает различные операторы, включая арифметические, логические и сравнительные операторы. Например:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+            </div>
+            <pre class="CodeboxCode">
+result = (5 + 3) * 2
+is_greater = result > 10 </pre>
+        </div>
+        <p class="Text">В этом примере мы вычисляем результат арифметического выражения и проверяем, больше ли он 10.</p>
+
+        <h2 class="ThemeTitle">Подпрограммы</h2>
+        <p class="Text">Подпрограммы в Fortran могут быть определены как функции или подпрограммы. Вот пример простой функции:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+            </div>
+            <pre class="CodeboxCode">
+FUNCTION greet(name)
+    CHARACTER(len=*), INTENT(IN) :: name
+    CHARACTER(len=30) :: greet
+
+    greet = "Привет, " // name
+END FUNCTION greet </pre>
+        </div>
+
+        <p class="Text">Теперь вы можете вызвать функцию <code class="CodeText">greet</code> с именем, и она вернет приветственное сообщение.</p>
+
+        <h2 class="ThemeTitle">Управляющие структуры</h2>
+        <p class="Text">Fortran предлагает различные конструкции управления, такие как условные операторы и циклы. Вот пример условного оператора:</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+            </div>
+            <pre class="CodeboxCode">
+IF (age > 18) THEN
+    PRINT *, "Взрослый"
+ELSE
+    PRINT *, "Несовершеннолетний"
+END IF </pre>
+        </div>
+
+        <p class="Text">В этом примере мы проверяем, является ли человек взрослым, и выводим соответствующее сообщение.</p>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">Fortran остается важным языком для научных и инженерных расчетов благодаря своей простоте и эффективности. Понимание основ переменных, операторов, подпрограмм и структур управления поможет вам начать программировать на Fortran.</p>
+    </article>
+</main>

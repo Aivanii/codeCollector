@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="../../src/articlesStyles.css">
+<main>
+    <div class="TopContainer">
+        <div class="FlexContainer">
+            <ul class="TopUl">
+                <li class="TopLi"> <a class="TopLiLink" href="/home">Home</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development">Backend development</a> </li>
+                <li class="TopLi"> <a class="TopLiLink" href="/articles/Backend_development/Node.js">Node.js</a> </li>
+            </ul> <span class="DateSpan">16.11.2024</span>
+        </div>
+        <h1 class="TitleText">Синтаксис Node.js</h1>
+    </div>
+    <article class="ArticleContainer">
+        <p class="Text">Node.js — это среда выполнения JavaScript, которая позволяет запускать JavaScript на стороне сервера. Она основана на движке V8 от Google и позволяет разработчикам создавать быстрые и масштабируемые сетевые приложения. В этой статье мы рассмотрим основные аспекты синтаксиса Node.js, включая работу с модулями, асинхронное программирование и создание простого веб-сервера.</p>
+        
+        <h2 class="ThemeTitle">Основы синтаксиса JavaScript</h2>
+        <p class="Text">Node.js использует синтаксис JavaScript, поэтому важно знать основные конструкции языка, такие как переменные, функции и объекты.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+            </div>
+            <pre class="CodeboxCode">
+const greeting = "Привет, мир!";
+function sayHello() {
+    console.log(greeting);
+}
+sayHello(); </pre>
+        </div>
+        <p class="Text">В этом примере мы объявили переменную <code class="CodeText">greeting</code> и функцию <code class="CodeText">sayHello</code>, которая выводит приветственное сообщение в консоль.</p>
+
+        <h2 class="ThemeTitle">Работа с модулями</h2>
+        <p class="Text">Node.js поддерживает модульную систему, что позволяет разбивать код на отдельные файлы и использовать их в других частях приложения. Для экспорта и импорта модулей используются ключевые слова <code class="CodeText">module.exports</code> и <code class="CodeText">require</code>.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+            </div>
+            <pre class="CodeboxCode">
+// файл greeting.js
+const greeting = "Привет, мир!";
+module.exports = greeting;
+
+// файл app.js
+const greeting = require('./greeting');
+console.log(greeting); </pre>
+        </div>
+
+        <p class="Text">В этом примере мы создали модуль <code class="CodeText">greeting.js</code>, который экспортирует строку, и импортировали его в <code class="CodeText">app.js</code>.</p>
+
+        <h2 class="ThemeTitle">Асинхронное программирование</h2>
+        <p class="Text">Node.js использует асинхронное программирование, что позволяет обрабатывать множество запросов одновременно. Основные способы работы с асинхронностью включают колбэки, промисы и async/await.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+            </div>
+            <pre class="CodeboxCode">
+const fs = require('fs');
+
+fs.readFile('file.txt', 'utf8', (err, data) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log(data);
+}); </pre>
+        </div>
+
+        <p class="Text">В этом примере мы используем функцию <code class="CodeText">readFile</code> из модуля <code class="CodeText">fs</code> для чтения файла. Обратите внимание на использование колбэка для обработки результата.</p>
+
+        <h2 class="ThemeTitle">Создание простого веб-сервера</h2>
+        <p class="Text">Node.js позволяет легко создавать веб-серверы с помощью встроенного модуля <code class="CodeText">http</code>.</p>
+
+        <div class="CodeContainer">
+            <div class="SpanCodeboxLine">
+                <span class="SpanLine">1</span>
+                <span class="SpanLine">2</span>
+                <span class="SpanLine">3</span>
+                <span class="SpanLine">4</span>
+                <span class="SpanLine">5</span>
+                <span class="SpanLine">6</span>
+                <span class="SpanLine">7</span>
+                <span class="SpanLine">8</span>
+                <span class="SpanLine">9</span>
+                <span class="SpanLine">10</span>
+                <span class="SpanLine">11</span>
+            </div>
+            <pre class="CodeboxCode">
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello, World!\n');
+});
+
+server.listen(3000, () => {
+    console.log('Сервер запущен на http://localhost:3000/');
+}); </pre>
+        </div>
+
+        <p class="Text">В этом примере мы создаем простой веб-сервер, который отвечает "Hello, World!" на запросы. Сервер слушает на порту 3000.</p>
+
+        <h2 class="ThemeTitle">Заключение</h2>
+        <p class="Text">Node.js предоставляет мощные возможности для создания серверных приложений с использованием JavaScript. Понимание основ синтаксиса и особенностей Node.js поможет вам создавать эффективные и масштабируемые приложения.</p>
+    </article>
+</main>
