@@ -7,12 +7,6 @@ import axios from 'axios';
 import { Link } from "../TwoFiltersPage/TwoFiltersPageStyles";
 import { Container } from "../TwoFiltersPage/TwoFiltersPageStyles";
 
-const preset = [
-    ["Frontend_development", "JavaScript"],
-    { href: '../Articles/DevOps/Docker/test_article.html', title: 'test_article' },
-    { href: '../Articles/DevOps/Docker/test_article.html', title: 'test_article' }
-];
-
 export default function Search() {
     const { request } = useParams();
     const [loadingStatus, setLoadingStatus] = useState("loading");
@@ -75,14 +69,18 @@ export default function Search() {
                                                             <li className="TopLi">
                                                                 <a className="TopLiLink" href="/home">Home</a>
                                                             </li>
-                                                            <li className="TopLi">
-                                                                <a className="TopLiLink" href={"/articles/" + elem[0]}>{elem[0]}</a>
-                                                            </li>
+                                                            {(elem[0]) && (
+                                                                <li className="TopLi">
+                                                                    <a className="TopLiLink" href={"/articles/" + elem[0]}>{elem[0]}</a>
+                                                                </li>)
+
+                                                            }
                                                             {elem[1] && (
                                                                 <li className="TopLi">
                                                                     <a className="TopLiLink" href={"/articles/" + elem[0] + "/" + elem[1]}>{elem[1]}</a>
                                                                 </li>)
                                                             }
+
                                                         </ul>
                                                     </div>
                                                 </div>

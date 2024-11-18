@@ -4,6 +4,7 @@ import LoadingElem from './LoadingElem';
 import Footer from '../Footer/Footer';
 import ErrorElem from './ErrorElem';
 import SendHistoryArticle from './SendHistoryArticle';
+import LeftMenu from './LeftMenu';
 
 export default function MainArticle() {
     const [data, setData] = useState([]);
@@ -50,7 +51,8 @@ export default function MainArticle() {
             } else {
                 newSpan.textContent = '☆';
             }
-            newSpan.onclick = () => {;
+            newSpan.onclick = () => {
+                ;
                 if (newSpan.textContent === '★') {
                     newSpan.textContent = '☆';
                 } else {
@@ -72,6 +74,7 @@ export default function MainArticle() {
                 : (
                     <>
                         <div className="Container" dangerouslySetInnerHTML={{ __html: data }}></div>
+                        <LeftMenu />
                         <Footer />
                     </>
                 )}

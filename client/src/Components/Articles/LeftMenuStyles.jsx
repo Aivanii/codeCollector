@@ -26,7 +26,7 @@ export const FilterBtn = styled.button`
     border: none;
     cursor: pointer;
     position: absolute;
-    top: auto;
+    top: 5rem;
     left: 0;
 `;
 export const CloseBtn = styled.button`

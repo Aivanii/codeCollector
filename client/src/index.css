@@ -28,7 +28,7 @@ body {
 main {
     display: grid;
     grid-template-rows: 0fr auto;
-    min-height: 80vh;
+    min-height: 79vh;
     margin-bottom: 1rem;
 }
 

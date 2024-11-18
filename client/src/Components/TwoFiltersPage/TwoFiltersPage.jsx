@@ -26,28 +26,29 @@ export default function TwoFiltersPage() {
     return (
         <>
             <main>
-                <div className="TopContainer">
-                    <div className="FlexContainer">
-                        <ul className="TopUl">
-                            <li className="TopLi">
-                                <a className="TopLiLink" href="/home">Home</a>
-                            </li>
-                            <li className="TopLi">
-                                <a className="TopLiLink" href={"/articles/" + url[2]}>{url[2].replace(/_/g, " ")}</a>
-                            </li>
-                            <li className="TopLi">
-                                <a className="TopLiLink" href={"/articles/" + url[2] + "/" + url[3]}>{url[3].replace(/_/g, " ")}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
                 {error ? (
                     <ErrorElem />
                 ) : loading ?
                     <LoadingElem />
                     : (
                         <>
-                            <Container style = {{marginTop: "1rem"}}>
+                            <Container style={{ marginTop: "1rem" }}>
+                                <div className="TopContainer">
+                                    <div className="FlexContainer">
+                                        <ul className="TopUl">
+                                            <li className="TopLi">
+                                                <a className="TopLiLink" href="/home">Home</a>
+                                            </li>
+                                            <li className="TopLi">
+                                                <a className="TopLiLink" href={"/articles/" + url[2]}>{url[2].replace(/_/g, " ")}</a>
+                                            </li>
+                                            <li className="TopLi">
+                                                <a className="TopLiLink" href={"/articles/" + url[2] + "/" + url[3]}>{url[3].replace(/_/g, " ")}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br></br>
                                 {
                                     (data.length > 0)
                                         ?

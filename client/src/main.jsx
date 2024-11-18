@@ -88,7 +88,6 @@ const Route = createBrowserRouter([
 		path: '/articles/:filt1/:filt2/:article',
 		element: (<>
 			<Articles />
-			<LeftMenu></LeftMenu>
 			<TextArticle />
 		</>),
 		errorElement: <ErrorPage404 />,

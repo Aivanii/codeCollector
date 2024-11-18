@@ -7,6 +7,7 @@ import { Link } from "./MainArticleStyles";
 
 export default function LeftMenu() {
     const [isDivActive, setIsDivActive] = useState(false);
+    const [sections, setSections] = useState([]);
     const divContainer = document.querySelector("#divContainer");
     let scriptSrc = "../../src/Components/PLBtns/HideAndShowLists.js";
     if (window.location.href.split('/').length === 7) {
@@ -29,15 +30,24 @@ export default function LeftMenu() {
         }
         if (!document.querySelector(`script[src="${scriptSrc}"]`)) createScript();
     }, []);
-
-    const sections = Array.from(document.querySelectorAll("h2")).map(
-        h2 => (<Link key={h2.id} href={"#" + h2.id}>{h2.textContent}</Link>)
-    );
-    console.log(sections);
+    useEffect(() => {
+        const headings = document.querySelectorAll('h2');
+        console.log(headings);
+        headings.forEach(heading => {
+            const id = heading.textContent.trim().replace(/\s+/g, '_');
+            heading.id = id;
+        });
+        setSections(Array.from(headings).map(
+            (h2, index) => (
+                <Link key={`LeftMenu${index}`} href={"#" + h2.id}>{h2.textContent}</Link>
+            )
+        ));
+        console.log(sections);
+    }, []);
 
     return (
         <>
-            <FilterBtn onClick={() => { setIsDivActive(true) }}>
+            <FilterBtn id = "openLeftMenuBtn" onClick={() => { setIsDivActive(true) }}>
                 <FilterSvg></FilterSvg>
             </FilterBtn>
             <ContainerLeft id="divContainer">

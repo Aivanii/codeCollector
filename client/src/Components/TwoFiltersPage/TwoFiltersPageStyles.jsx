@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: var(--articleActiveWidth);
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 95%;
+    max-width: 720px;
 `;
 export const Span = styled.span`
     color: var(--unactiveFontColor);
