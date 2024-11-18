@@ -24,16 +24,27 @@ export default function LeftMenuItems() {
     return (
         <LeftDivUl>
             <Li>
-                <Link onClick = {() => {navigate(`/user/${userId}`)}}>
+                <Link onClick={() => { navigate(`/user/${userId}`) }}>
                     Страница пользователя
                 </Link>
             </Li>
             <Li>
-            <Link onClick = {() => {navigate(`/user/${userId}/history`)}}>
+                <Link onClick={() => { navigate(`/user/${userId}/history`) }}>
                     История
                 </Link>
 
             </Li>
-        </LeftDivUl>
+            <Li>
+                <Link onClick={() => { navigate(`/user/${userId}/change_pass`) }}>
+                    Смена пароля
+                </Link>
+
+            </Li>
+            <Li>
+            <Link onClick={() => { navigate(`/user/${userId}/delete_acc`) }}>
+                    Удаление аккаунта
+                </Link>
+            </Li>
+        </LeftDivUl >
     );
 }

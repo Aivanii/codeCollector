@@ -20,8 +20,10 @@ const useAxios = (url, method = "GET", body = null, options = {}) => {
                 setError(err);
             }
         }
-        setTimeout((getAxios), 4000);
-    }, [url, options]);
+        const timeoutId = setTimeout((getAxios), 0);
+
+        return () => clearTimeout(timeoutId);
+    }, [url, method, body, options]);
 
     return { data, error };
 }

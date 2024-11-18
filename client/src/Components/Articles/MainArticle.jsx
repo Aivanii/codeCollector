@@ -10,7 +10,6 @@ export default function MainArticle() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const isArticleFav = false;
     let url = new URL(window.location.href).pathname;
     url = url.split('/');
     useEffect(() => {
@@ -35,35 +34,7 @@ export default function MainArticle() {
         setTimeout(fetchData, time);
     }, []);
 
-    useEffect(() => {
-        const DateElem = document.querySelector(".DateSpan");
-        const OldSpan = document.querySelector("#FavSpan");
-        if (!DateElem) return;
-        if (!OldSpan) {
-            const newSpan = document.createElement('span');
-            newSpan.style.marginLeft = ".5rem";
-            newSpan.style.fontSize = "1.5rem";
-            newSpan.style.cursor = "pointer";
-            newSpan.style.color = "gold";
-            newSpan.id = "FavSpan";
-            if (isArticleFav) {
-                newSpan.textContent = '★';
-            } else {
-                newSpan.textContent = '☆';
-            }
-            newSpan.onclick = () => {
-                ;
-                if (newSpan.textContent === '★') {
-                    newSpan.textContent = '☆';
-                } else {
-                    newSpan.textContent = '★';
-                }
-            };
-            DateElem.insertAdjacentElement('beforeend', newSpan);
-            return;
-        }
-
-    }, [loading]);
+    
 
     return (
         <>

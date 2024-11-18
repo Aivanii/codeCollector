@@ -13,7 +13,10 @@ export const Label = styled.label`
     color: var(--unactiveFontColor);
     font-size: var(--standartFontSize);
 `;
-
+export const Text = styled.article`
+    color: var(--unactiveFontColor);
+    font-size: var(--standartFontSize);
+`;
 export const Input = styled.input`
     background: var(--lightLinkBg);
     padding: .2rem;
@@ -75,4 +78,21 @@ export const Btn = styled.button`
         color: var(--activeFontColor);
     }
     cursor: pointer;
+`;
+
+export const DelBtn = styled(Btn)`
+    margin: auto;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 1rem);
+    transition: color var(--standartDurationTime), 
+                border-color var(--standartDurationTime),
+                transform var(--standartDurationTime);
+
+    &:hover {
+        color: #e71616;
+        border-color: #e71616;
+        transform: translate(-50%, 1rem) scale(0.9);
+    }
 `;

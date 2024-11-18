@@ -20,11 +20,12 @@ import PolicyPage from './pages/PolicyPage.jsx';
 import EmployeesPage from './pages/EmployeesPage.jsx';
 import SearchPage from './pages/SearchPage.jsx';
 //components
-import LeftMenu from "./Components/Articles/LeftMenu.jsx";
 import OneFilterPage from './Components/OneFilterPage/OneFilterPage.jsx';
 import TwoFiltersPage from './Components/TwoFiltersPage/TwoFiltersPage.jsx';
 import MainUser from './pages/MainUser/MainUser.jsx';
 import HistoryUser from './pages/MainUser/HistoryUser.jsx';
+import ChangePass from './pages/MainUser/ChangePass.jsx';
+import DeleteAcc from './pages/MainUser/DeleteAcc.jsx';
 //
 const Route = createBrowserRouter([
 	{
@@ -112,7 +113,22 @@ const Route = createBrowserRouter([
 			<User RightMenu={HistoryUser} Title={"История просмотров"}></User>
 		</>),
 		errorElement: <ErrorPage404 />,
-	}
+	},
+	{
+		path: '/user/:id/change_pass',
+		element: (<>
+			<User RightMenu={ChangePass} Title={"Смена пароля пользователя"}></User>
+		</>),
+		errorElement: <ErrorPage404 />,
+	},
+	{
+		path: '/user/:id/delete_acc',
+		element: (<>
+			<User RightMenu={DeleteAcc} Title={"Удаление аккаунта пользователя"}></User>
+		</>),
+		errorElement: <ErrorPage404 />,
+	},
+	
 ]);
 
 ReactDOM.createRoot(document.querySelector("#root")).render(

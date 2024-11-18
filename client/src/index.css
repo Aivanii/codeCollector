@@ -40,9 +40,9 @@ main {
     --PLBtnsWidth: clamp(160px, 50vw, 1280px);
     --articleActiveWidth: clamp(160px, 80vw, 1280px);
     --avatarImg: clamp(2rem, 4vw, 3rem);
-    --superLongDurationTime: 20s;
-    --standartDurationTime: .2s;
-    --longDurationTime: .75s;
+    --superLongDurationTime: 20s ease;
+    --standartDurationTime: .2s ease;
+    --longDurationTime: .75s ease;
     --linkUnactiveColor: #84a0ef;
     --linkActiveColor: white;
     --unactiveFontColor: #ffffffca;
